@@ -46,6 +46,13 @@
     return el;
   };
 
+  const priorHipScore = {
+    "HIP walk forward": 64,
+    "HIP walk backward": 41,
+    "HIP strafe left": 58,
+    "HIP strafe right": 46
+  };
+
   const scoredSeries = (clips) => {
     const order = [];
     const groups = new Map();
@@ -57,11 +64,16 @@
       }
       groups.get(clip.motion).push(clip.score);
     }
-    return order.map((name, index) => ({
-      name,
-      scores: groups.get(name),
-      color: trendColors[index % trendColors.length]
-    }));
+    return order.map((name, index) => {
+      const scores = groups.get(name).slice();
+      const prior = priorHipScore[name];
+      if (typeof prior === "number" && scores[0] !== prior) scores.unshift(prior);
+      return {
+        name,
+        scores,
+        color: trendColors[index % trendColors.length]
+      };
+    });
   };
 
   const renderTrend = (clips) => {

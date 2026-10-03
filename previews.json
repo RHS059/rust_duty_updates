@@ -34,7 +34,7 @@
       "score": 79,
       "motion": "HIP walk forward",
       "passCriterion": "Keep the step timing and the figure-8 path. Deepen the lows at about 0.15s and 0.48s by about another tenth of the reference, and again on the second loop.",
-      "video": "media/hip-forward-r4.mp4",
+      "video": "media/hip-forward-r5.mp4",
       "sample": false,
       "detail": ""
     },

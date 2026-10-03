@@ -1,0 +1,53 @@
+{
+  "schema": "rust-duty-jump-reference-paired-preview/v1",
+  "revision": "r4",
+  "video": "media/jump_animation.mp4",
+  "sha256": "5a966aec851525bd2709e808b504515ff5796d67d956e6f1e1bef8a31b359ad2",
+  "bytes": 1487558,
+  "frames": 100,
+  "fps": 60,
+  "duration_seconds": 1.6666666666666667,
+  "width": 1280,
+  "height": 1760,
+  "layout": "COD reference above / genuine Eevee Viewport Render Animation below",
+  "source": {
+    "repository": "RHS059/rust_duty",
+    "commit": "2333cef50554fd4408d4950c32fe201b78f21c86",
+    "path": "assets/authoring/jump/halcyon_jump.blend",
+    "sha256": "e6e59edeac62accc185d2b53a9fe5eab7d876b0a64a404bba1495b9875e2482e"
+  },
+  "reference": {
+    "repository": "RHS059/rust_duty",
+    "storage_path": "references/movement/",
+    "restored_filename": "modern_warfare_2022_movement_reference.mp4",
+    "sha256": "491a1729aa0f32373025d35fff86da76c6c1c8f057c0c553d0fbb5fb6226ff46",
+    "native_frames_half_open": [
+      4014,
+      4114
+    ],
+    "fps": 60
+  },
+  "mapping": {
+    "path": "assets/authoring/jump/reference_frame_map.json",
+    "commit": "2333cef50554fd4408d4950c32fe201b78f21c86",
+    "sha256": "575413fb08edb41a100a39850b823202051dd8165e378d2b4917dede82e7bf64",
+    "one_to_one_native_speed": true,
+    "playback_retimed": false
+  },
+  "technical_verification": {
+    "complete_decode": true,
+    "all_output_pts": true,
+    "actual_reference_window_pts": true,
+    "source_preserved": true,
+    "source_capture_samples": 65,
+    "render_method": "Genuine foreground Eevee Viewport Render Animation",
+    "panel_pixels_exact_before_h264": true
+  },
+  "limitations": [
+    "Weapon/optic geometry differs from COD; this is a constrained foreground-motion retarget",
+    "Single-view 3D transforms are inferred, not uniquely reconstructed",
+    "COD retains the actual world/camera arc; Blender camera remains fixed",
+    "No runtime behavior or ADS composition acceptance is claimed"
+  ],
+  "artistic_review": "Pending Elara reference-paired review; no score claimed"
+}

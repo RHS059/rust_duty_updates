@@ -10,7 +10,7 @@
       "score": null,
       "motion": null,
       "passCriterion": null,
-      "video": null,
+      "video": "media/2026-10-03-reload_current_wip-eevee-studio-reference.mp4",
       "sample": false,
       "detail": "Workbench diagnostic of the current reload. No motion score yet, so the tile keeps only the maker mark."
     },
@@ -90,7 +90,7 @@
       "score": 35,
       "motion": "ADS walk forward",
       "passCriterion": "It needs its own ADS walk, sights locked on center, almost no side yaw, and a tighter vertical bounce.",
-      "video": null,
+      "video": "media/2026-10-03-ads-v4-hip_walk_forward_r1-eevee-reference-126f.mp4",
       "sample": false,
       "detail": "ADS v4 over the unchanged HIP forward baseline."
     },
@@ -102,7 +102,7 @@
       "score": 32,
       "motion": "ADS walk backward",
       "passCriterion": "It needs its own ADS walk backward, sights locked on center, and a path that reads as backward instead of a wide figure-8.",
-      "video": null,
+      "video": "media/2026-10-03-ads-v4-hip_walk_backward_r1-eevee-reference-162f.mp4",
       "sample": false,
       "detail": "ADS v4 over the unchanged HIP backward baseline."
     },
@@ -114,7 +114,7 @@
       "score": 34,
       "motion": "ADS strafe left",
       "passCriterion": "It needs its own ADS strafe left, sights locked on center, and no rightward overshoot.",
-      "video": null,
+      "video": "media/2026-10-03-ads-v4-hip_strafe_left_r1-eevee-reference-114f.mp4",
       "sample": false,
       "detail": "ADS v4 over the unchanged HIP left baseline."
     },
@@ -126,7 +126,7 @@
       "score": 33,
       "motion": "ADS strafe right",
       "passCriterion": "It needs its own ADS strafe, sights locked on center, a rightward path with no left overshoot, and a fast shallow bounce.",
-      "video": null,
+      "video": "media/2026-10-03-ads-v4-hip_strafe_right_r1-eevee-reference-84f.mp4",
       "sample": false,
       "detail": "ADS v4 over the unchanged HIP right baseline."
     },
@@ -138,7 +138,7 @@
       "score": 51,
       "motion": "ADS walk forward",
       "passCriterion": "Keep the sight lock. Restore a dedicated ADS forward walk with the reference's shallow footfall and cadence. The bottom is nearly still.",
-      "video": null,
+      "video": "media/2026-10-03-ads-v5-trial1-hip_walk_forward_r1-eevee-reference-126f.mp4",
       "sample": false,
       "detail": "ADS v5 trial 1 over unchanged HIP r1. Fail 51. Sight stays on center. The walk pulse is missing. Not committed."
     },
@@ -150,7 +150,7 @@
       "score": null,
       "motion": null,
       "passCriterion": null,
-      "video": null,
+      "video": "media/2026-10-03-pickup_pose_inspection-eevee-studio-reference.mp4",
       "sample": false,
       "detail": "One held pose, not a motion review. Maker mark only. No motion score."
     }

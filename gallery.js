@@ -48,7 +48,8 @@
 
   const render = (data) => {
     const clips = data.clips || [];
-    note.textContent = "Placeholder frames. Video paths in previews.json are empty until the files are added under media/.";
+    const ready = clips.filter((clip) => clip.video).length;
+    note.textContent = ready ? `${ready} of ${clips.length} clips have a video.` : "No videos yet. The colored tiles are placeholders until a file is set in previews.json.";
     grid.replaceChildren();
     for (const clip of clips) {
       const button = document.createElement("button");
@@ -56,7 +57,10 @@
       button.type = "button";
       button.dataset.clip = clip.id;
       button.setAttribute("aria-label", clip.title);
-      button.innerHTML = `<span class="tile-art" aria-hidden="true"><span class="pane pane-reference">Reference</span><span class="pane pane-current">Current render</span></span><span class="tile-title"></span>${markHtml(clip)}`;
+      const art = clip.video
+        ? `<video class="tile-video" src="${clip.video}" muted loop playsinline autoplay preload="metadata"></video>`
+        : `<span class="tile-art" aria-hidden="true"><span class="pane pane-reference">Reference</span><span class="pane pane-current">Current render</span></span>`;
+      button.innerHTML = `${art}<span class="tile-title"></span>${markHtml(clip)}`;
       button.querySelector(".tile-title").textContent = clip.title;
       button.addEventListener("click", () => openClip(clip.id));
       grid.append(button);
@@ -69,8 +73,17 @@
       k.textContent = kicker(clip);
       const h = document.createElement("h2");
       h.textContent = clip.title;
+      if (clip.video) {
+        const video = document.createElement("video");
+        video.className = "sheet-video";
+        video.src = clip.video;
+        video.controls = true;
+        video.loop = true;
+        video.playsInline = true;
+        article.append(video);
+      }
       const made = document.createElement("p");
-      made.textContent = `Made by ${makerName[clip.maker] || clip.maker}. ${clip.video ? "Video: " + clip.video : "No video file yet."}`;
+      made.textContent = `Made by ${makerName[clip.maker] || clip.maker}. ${clip.video ? "" : "No video file yet."}`.trim();
       const detail = document.createElement("p");
       detail.textContent = clip.detail || "";
       article.append(k, h, made, detail);

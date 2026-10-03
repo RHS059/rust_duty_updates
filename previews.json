@@ -58,7 +58,7 @@
       "score": 79,
       "motion": "HIP strafe left",
       "passCriterion": "Keep the timing and the restored rightward travel. Add the inward yaw and roll on the leftward upswing around 0.50s to 0.70s.",
-      "video": "media/hip-left-r3.mp4",
+      "video": "media/hip-left-r4.mp4",
       "sample": false,
       "detail": ""
     },

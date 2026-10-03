@@ -12,7 +12,7 @@
       "passCriterion": null,
       "video": "media/2026-10-03-reload_current_wip-eevee-studio-reference.mp4",
       "sample": false,
-      "detail": "Workbench diagnostic of the current reload. No motion score yet, so the tile keeps only the maker mark."
+      "detail": "Eevee viewport capture under neutral studio display lighting; source Actions and camera unchanged. No motion score yet, so the tile keeps only the maker mark."
     },
     {
       "id": "reload-opening",
@@ -152,7 +152,7 @@
       "passCriterion": null,
       "video": "media/2026-10-03-pickup_pose_inspection-eevee-studio-reference.mp4",
       "sample": false,
-      "detail": "One held pose, not a motion review. Maker mark only. No motion score."
+      "detail": "Eevee viewport capture under neutral studio display lighting; one held pose for inspection, not a motion clip. Maker mark only. No motion score."
     }
   ],
   "showWithoutVideo": false

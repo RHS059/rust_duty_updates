@@ -1,30 +1,21 @@
 (() => {
-  const panel = document.querySelector("#project-status-panel");
-  const mobile = matchMedia("(max-width: 900px)");
-  const syncPanel = () => { panel.open = !mobile.matches; };
-  syncPanel();
-  mobile.addEventListener("change", syncPanel);
-
-  const loginButton = document.querySelector("#gallery-login");
-  const loginDialog = document.querySelector("#login-dialog");
-  const loginForm = document.querySelector("#login-form");
-  const loginMessage = document.querySelector("#login-message");
-  loginButton.addEventListener("click", () => {
-    loginMessage.textContent = "";
-    loginDialog.showModal();
+  const dialog = document.querySelector("#clip-dialog");
+  const articles = [...dialog.querySelectorAll("article")];
+  const openClip = (id) => {
+    let shown = false;
+    for (const article of articles) {
+      const match = article.id === id;
+      article.hidden = !match;
+      if (match) shown = true;
+    }
+    if (!shown || typeof dialog.showModal !== "function") return;
+    if (!dialog.open) dialog.showModal();
+  };
+  document.querySelectorAll(".tile").forEach((tile) => {
+    tile.addEventListener("click", () => openClip(tile.dataset.clip));
   });
-  loginDialog.querySelector("[data-close]").addEventListener("click", () => loginDialog.close());
-  loginForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    loginForm.elements.password.value = "";
-    loginMessage.textContent = "This static replica does not accept logins, uploads, or status posts.";
-  });
-
-  document.querySelectorAll(".comment-compose").forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const message = form.parentElement.querySelector(".comment-message");
-      message.textContent = "Comments stay on this page only and are not saved.";
-    });
+  dialog.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
   });
 })();

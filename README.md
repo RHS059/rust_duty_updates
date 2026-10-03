@@ -1,5 +1,7 @@
 # rust_duty_updates
 
-Static preview gallery for animation review cards. Open `index.html` in a browser. Media is placeholder color frames only. No clips or videos are in this repo.
+Placeholder media grid for Rust Duty review clips. Open index.html, or the GitHub Pages site at https://rhs059.github.io/rust_duty_updates/
 
-Review labels and scores follow the live gallery structure. This copy uses a Dracula palette and the Inter font. It does not replace animation source files.
+Tiles are colored boxes labeled Reference and Current render. No video files are in this repo.
+
+The layout is a centered media grid with agent status on the right. There is no left navigation.

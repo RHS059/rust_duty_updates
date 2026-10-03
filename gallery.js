@@ -47,10 +47,10 @@
   };
 
   const priorHipScores = {
-    "HIP walk forward": [64, 74],
-    "HIP walk backward": [41, 68],
-    "HIP strafe left": [58, 54],
-    "HIP strafe right": [46, 72]
+    "HIP walk forward": [64, 74, 78],
+    "HIP walk backward": [41, 68, 76],
+    "HIP strafe left": [58, 54, 79],
+    "HIP strafe right": [46, 72, 77]
   };
 
   const scoredSeries = (clips) => {

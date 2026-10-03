@@ -134,13 +134,13 @@
       "id": "ads-v5-forward",
       "title": "Forward ADS v5 trial 1",
       "maker": "aella",
-      "review": "maker",
-      "score": null,
-      "motion": null,
-      "passCriterion": null,
+      "review": "fail",
+      "score": 51,
+      "motion": "ADS walk forward",
+      "passCriterion": "Keep the sight lock. Restore a dedicated ADS forward walk with the reference's shallow footfall and cadence. The bottom is nearly still.",
       "video": null,
       "sample": false,
-      "detail": "New forward ADS candidate. Not scored yet. Maker mark only until the review is posted."
+      "detail": "ADS v5 trial 1 over unchanged HIP r1. Fail 51. Sight stays on center. The walk pulse is missing. Not committed."
     },
     {
       "id": "pickup",

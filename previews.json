@@ -36,7 +36,7 @@
       "standingResult": "fail",
       "motion": "HIP walk forward",
       "passCriterion": "Keep the current timing. Cut the vertical bounce, the side travel, and the barrel yaw so the lows, the recovery, and the left travel match the reference.",
-      "video": null,
+      "video": "media/hip-forward.mp4",
       "sample": false,
       "detail": "Standing r1 score is 64, fail. The tile stays maker-only until a new render of changed motion is posted."
     },
@@ -50,7 +50,7 @@
       "standingResult": "fail",
       "motion": "HIP walk backward",
       "passCriterion": "Sway side to side like the reference instead of pumping up and down. Match the reference drop near 0.45s.",
-      "video": null,
+      "video": "media/hip-backward.mp4",
       "sample": false,
       "detail": "Standing r1 score is 41, fail. The clock means this one is in review. No new score until a new render is posted."
     },
@@ -64,7 +64,7 @@
       "standingResult": "fail",
       "motion": "HIP strafe left",
       "passCriterion": "Keep the loop timing. Shorten the rightward travel, reduce the inward roll, and lift the dip at 0.35 to 0.45s and 1.16 to 1.26s.",
-      "video": null,
+      "video": "media/hip-left.mp4",
       "sample": false,
       "detail": "Standing r1 score is 58, fail. The tile stays maker-only until a new render of changed motion is posted."
     },
@@ -78,7 +78,7 @@
       "standingResult": "fail",
       "motion": "HIP strafe right",
       "passCriterion": "Travel left around 0.30s and right around 0.60s. Replace the up-down bob.",
-      "video": null,
+      "video": "media/hip-right.mp4",
       "sample": false,
       "detail": "Standing r1 score is 46, fail. The clock means this one is in review. No new score until a new render is posted."
     },

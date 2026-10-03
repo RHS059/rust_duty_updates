@@ -225,10 +225,26 @@
       button.dataset.clip = clip.id;
       button.setAttribute("aria-label", clip.title);
       const art = clip.video
-        ? `<video class="tile-video" src="${clip.video}" muted loop playsinline autoplay preload="metadata"></video>`
+        ? `<video class="tile-video" src="${clip.video}" muted loop playsinline preload="metadata"></video>`
         : `<span class="tile-art" aria-hidden="true"><span class="pane pane-reference">Reference</span><span class="pane pane-current">Current render</span></span>`;
       button.innerHTML = `${art}<span class="tile-title"></span>${markHtml(clip)}`;
       button.querySelector(".tile-title").textContent = clip.title;
+      const tileVideo = button.querySelector("video");
+      if (tileVideo) {
+        tileVideo.muted = true;
+        button.addEventListener("mouseenter", () => {
+          const pending = tileVideo.play();
+          if (pending && typeof pending.catch === "function") pending.catch(() => {});
+        });
+        button.addEventListener("mouseleave", () => {
+          tileVideo.pause();
+          try {
+            tileVideo.currentTime = 0;
+          } catch (error) {
+            /* metadata may not be ready yet */
+          }
+        });
+      }
       button.addEventListener("click", () => openClip(clip.id));
       grid.append(button);
 

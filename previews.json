@@ -75,13 +75,13 @@
       "detail": ""
     },
     {
-      "id": "jump-r3",
+      "id": "jump-r4",
       "title": "Jump",
       "maker": "halcyon",
       "review": "fail",
-      "score": 79,
+      "score": 74,
       "motion": "Jump",
-      "passCriterion": "Deepen the landing settle trough further on the existing beats while keeping the wider held takeoff compression and quiet air hold, so jump weight reads clearly above 80 on the fixed camera.",
+      "passCriterion": "On the existing land beats, match the COD weapon land dip depth and recovery shoulders while keeping the takeoff dip and raised air hold on their current frames.",
       "video": "media/jump_animation.mp4",
       "sample": false,
       "detail": ""

@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rust Duty Preview Gallery</title>
+<meta name="description" content="Rust Duty preview gallery replica with placeholder frames. No video files.">
+<meta name="theme-color" content="#282a36">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="gallery.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to animations</a>
+<header class="topbar">
+<div class="shell">
+<div class="brand"><span class="mark" aria-hidden="true">RD</span>RUST DUTY</div>
+<div class="account-actions">
+<button id="gallery-login" type="button">Log in</button>
+<button id="gallery-upload" type="button" class="primary-button" hidden>Upload</button>
+<button id="gallery-submit-status" type="button" hidden>Submit status</button>
+<button id="gallery-logout" type="button" hidden>Log out</button>
+</div>
+</div>
+</header>
+<div class="workspace-layout">
+<aside class="status-sidebar" aria-label="Project status">
+<details id="project-status-panel" open>
+<summary>Project status</summary>
+<div class="status-content">
+<div id="project-status-content">
+<section class="status-section"><h2>Aella</h2>
+<div class="status-task"><span class="state-badge state-unknown">Not reported</span><p class="status-task-text">Task not reported</p></div>
+<p class="status-freshness status-stale">No update reported, Awaiting status</p>
+<ol class="status-agents">
+<li><div class="status-task"><span class="status-slot">Agent 1</span><span class="state-badge state-unknown">Not reported</span><p class="status-task-text">Task not reported</p></div></li>
+<li><div class="status-task"><span class="status-slot">Agent 2</span><span class="state-badge state-unknown">Not reported</span><p class="status-task-text">Task not reported</p></div></li>
+<li><div class="status-task"><span class="status-slot">Agent 3</span><span class="state-badge state-unknown">Not reported</span><p class="status-task-text">Task not reported</p></div></li>
+</ol></section>
+<section class="status-section"><h2>Halcyon</h2>
+<div class="status-task"><span class="state-badge state-unknown">Not reported</span><p class="status-task-text">Task not reported</p></div>
+<p class="status-freshness status-stale">No update reported, Awaiting status</p>
+<ol class="status-agents">
+<li><div class="status-task"><span class="status-slot">Agent 1</span><span class="state-badge state-unknown">Not reported</span><p class="status-task-text">Task not reported</p></div></li>
+<li><div class="status-task"><span class="status-slot">Agent 2</span><span class="state-badge state-unknown">Not reported</span><p class="status-task-text">Task not reported</p></div></li>
+<li><div class="status-task"><span class="status-slot">Agent 3</span><span class="state-badge state-unknown">Not reported</span><p class="status-task-text">Task not reported</p></div></li>
+</ol></section>
+<section class="status-section status-github">
+<h2>GitHub</h2>
+<p>No verified complete build reported</p>
+<p class="status-freshness status-stale">No update reported, Awaiting status</p>
+</section>
+</div>
+<p id="project-status-message" class="status-refresh" role="status">Status refresh unavailable. Existing previews are still available.</p>
+</div>
+</details>
+</aside>
+<main id="main" class="gallery-main">
+<div class="heading gallery-heading">
+<div>
+<h1>Preview Gallery</h1>
+<p class="review-intro">Static replica of the review cards. Colored boxes stand in for stacked reference and current-render panels. No clips or videos are hosted here.</p>
+</div>
+</div>
+<section class="gallery-section" id="current-animations">
+<div class="review-stack">
+<article class="review-card" id="current-reload_current_wip">
+<header class="review-heading"><h3>Reload current wip</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="Reload current wip. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>Actual frozen source Action, original source camera, 960x540 Workbench diagnostic shading. Source file unchanged. This is not a game-renderer capture or animation approval. Full reload remains WIP; native 0-48 is not approved, including unfinished 30-48 arrival. Separate opening is not stitched into the main clip. Isolated transition includes the endpoint. Repeating this preview creates a cut; it does not prove a connected game transition.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Unknown / not verified</dd></div><div><dt>Version</dt><dd>PR17 e46f83d8 / RD_Reload_Tactical_HandApproach_AndReturn_WIP</dd></div><div><dt>Current rendering method</dt><dd>Blender Workbench diagnostic</dd></div><div><dt>Requested rendering update</dt><dd>Eevee viewport, update pending</dd></div><div><dt>Clip / action</dt><dd>reload_current_wip</dd></div><div><dt>Game binding</dt><dd>Configured gameplay clip</dd></div><div><dt>Timing</dt><dd>Frames 1-157, 60000/1001 fps, 2.619 s preview, source pose span 2.603 s, native 0-156</dd></div><div><dt>Reference</dt><dd>Verified source frame mapping<br>startFrame: 468, endFrame: 624, nativeRange: [0, 156], fps: 60000/1001, nativeZeroPTS: 7.8078, sourceSha256: 4d25c04b903c823898d44e6fc40c4c70db7660491ef27e2db4c9e1f3ee9a1aa8, verification: Original decoded frame468 scaled to 960x540 is pixel-identical to stored native0</dd></div><div><dt>Source commit</dt><dd>e46f83d84ece0c28ffbd10cf4504ed4ea0f91878</dd></div></dl>
+<p class="review-score">Reviewer: Elara, Motion score: not yet assigned</p>
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article><article class="review-card" id="current-reload_opening_wip">
+<header class="review-heading"><h3>Reload opening wip</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="Reload opening wip. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>Actual frozen source Action, original source camera, 960x540 Workbench diagnostic shading. Source file unchanged. This is not a game-renderer capture or animation approval. Full reload remains WIP; native 0-48 is not approved, including unfinished 30-48 arrival. Separate opening is not stitched into the main clip. Isolated transition includes the endpoint. Repeating this preview creates a cut; it does not prove a connected game transition.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Unknown / not verified</dd></div><div><dt>Version</dt><dd>PR17 e46f83d8 / RD_Reload_Tactical_Hands_Opening_WIP</dd></div><div><dt>Current rendering method</dt><dd>Blender Workbench diagnostic</dd></div><div><dt>Requested rendering update</dt><dd>Eevee viewport, update pending</dd></div><div><dt>Clip / action</dt><dd>reload_opening_wip</dd></div><div><dt>Game binding</dt><dd>Current alternate; not bound to gameplay</dd></div><div><dt>Timing</dt><dd>Frames 1-31, 60000/1001 fps, 0.517 s preview, source pose span 0.501 s, native 0-30</dd></div><div><dt>Reference</dt><dd>Verified source frame mapping<br>startFrame: 468, endFrame: 498, nativeRange: [0, 30], fps: 60000/1001, nativeZeroPTS: 7.8078, sourceSha256: 4d25c04b903c823898d44e6fc40c4c70db7660491ef27e2db4c9e1f3ee9a1aa8, verification: Original decoded frame468 scaled to 960x540 is pixel-identical to stored native0</dd></div><div><dt>Source commit</dt><dd>e46f83d84ece0c28ffbd10cf4504ed4ea0f91878</dd></div></dl>
+<p class="review-score">Reviewer: Elara, Motion score: not yet assigned</p>
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article><article class="review-card" id="current-hip_walk_forward_r1">
+<header class="review-heading"><h3>HIP walk forward</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="HIP walk forward. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>Frozen r1 baseline, rerendered through the actual Eevee rendered viewport. Original source camera, lighting, geometry and motion are unchanged. Both complete 16:9 panels are uniformly scaled without crop or spatial registration. Exact reference core and source cycle are shown twice.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Halcyon</dd></div><div><dt>Version</dt><dd>Directional r1, PR18</dd></div><div><dt>Current rendering method</dt><dd>Blender Eevee Next, foreground rendered viewport</dd></div><div><dt>Clip / action</dt><dd>hip_walk_forward_r1</dd></div><div><dt>Game binding</dt><dd>Configured current directional gameplay clip</dd></div><div><dt>Timing</dt><dd>Action frames 1-39 with repeated endpoint excluded, 38 unique frames x 2 loops, 60 fps</dd></div><div><dt>Reference</dt><dd>Exact periodic-core reference frames shown above current source render; timing correspondence only, fidelity unscored.<br>R2 / 5KM0XSKxTWw, decoded native 48-85, 0.800000-1.416667 s, repeated twice</dd></div><div><dt>Source commit</dt><dd>6bbfada1242d2d6c766c52cfc30c3ab511e41669</dd></div></dl><p class="review-limitations">Source-camera comparison; not gameplay capture. This is in-sample periodic-core evidence, not an all-motion fidelity or contact approval.</p><section class="prior-source-review"><h4>Prior r1 motion review</h4><p>Elara: 64%. Prior r1 motion assessment on earlier review media; this is not an approval of new Eevee media.</p><p><a href="https://github.com/RHS059/dot_chat/pull/1#issuecomment-5970730815" target="_blank" rel="noopener">Elara's source assessment</a></p></section><p class="review-score">Pending Elara review of Eevee rendering; prior r1 source motion score retained.</p>
+
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article><article class="review-card" id="current-hip_walk_backward_r1">
+<header class="review-heading"><h3>HIP walk backward</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="HIP walk backward. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>Frozen r1 baseline, rerendered through the actual Eevee rendered viewport. Original source camera, lighting, geometry and motion are unchanged. Both complete 16:9 panels are uniformly scaled without crop or spatial registration. Exact reference core and source cycle are shown twice.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Halcyon</dd></div><div><dt>Version</dt><dd>Directional r1, PR18</dd></div><div><dt>Current rendering method</dt><dd>Blender Eevee Next, foreground rendered viewport</dd></div><div><dt>Clip / action</dt><dd>hip_walk_backward_r1</dd></div><div><dt>Game binding</dt><dd>Configured current directional gameplay clip</dd></div><div><dt>Timing</dt><dd>Action frames 1-46 with repeated endpoint excluded, 45 unique frames x 2 loops, 60 fps</dd></div><div><dt>Reference</dt><dd>Exact periodic-core reference frames shown above current source render; timing correspondence only, fidelity unscored.<br>R2 / 5KM0XSKxTWw, decoded native 211-255, 3.516667-4.250000 s, repeated twice</dd></div><div><dt>Source commit</dt><dd>6bbfada1242d2d6c766c52cfc30c3ab511e41669</dd></div></dl><p class="review-limitations">Source-camera comparison; not gameplay capture. This is in-sample periodic-core evidence, not an all-motion fidelity or contact approval.</p><section class="prior-source-review"><h4>Prior r1 motion review</h4><p>Elara: 41%. Prior r1 motion assessment on earlier review media; this is not an approval of new Eevee media.</p><p><a href="https://github.com/RHS059/dot_chat/pull/1#issuecomment-5970730815" target="_blank" rel="noopener">Elara's source assessment</a></p></section><p class="review-score">Pending Elara review of Eevee rendering; prior r1 source motion score retained.</p>
+
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article><article class="review-card" id="current-hip_strafe_left_r1">
+<header class="review-heading"><h3>HIP strafe left</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="HIP strafe left. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>Frozen r1 baseline, rerendered through the actual Eevee rendered viewport. Original source camera, lighting, geometry and motion are unchanged. Both complete 16:9 panels are uniformly scaled without crop or spatial registration. Exact reference core and source cycle are shown twice.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Halcyon</dd></div><div><dt>Version</dt><dd>Directional r1, PR18</dd></div><div><dt>Current rendering method</dt><dd>Blender Eevee Next, foreground rendered viewport</dd></div><div><dt>Clip / action</dt><dd>hip_strafe_left_r1</dd></div><div><dt>Game binding</dt><dd>Configured current directional gameplay clip</dd></div><div><dt>Timing</dt><dd>Action frames 1-50 with repeated endpoint excluded, 49 unique frames x 2 loops, 60 fps</dd></div><div><dt>Reference</dt><dd>Exact periodic-core reference frames shown above current source render; timing correspondence only, fidelity unscored.<br>R2 / 5KM0XSKxTWw, decoded native 886-934, 14.766667-15.566667 s, repeated twice</dd></div><div><dt>Source commit</dt><dd>6bbfada1242d2d6c766c52cfc30c3ab511e41669</dd></div></dl><p class="review-limitations">Source-camera comparison; not gameplay capture. This is in-sample periodic-core evidence, not an all-motion fidelity or contact approval.</p><section class="prior-source-review"><h4>Prior r1 motion review</h4><p>Elara: 58%. Prior r1 motion assessment on earlier review media; this is not an approval of new Eevee media.</p><p><a href="https://github.com/RHS059/dot_chat/pull/1#issuecomment-5970730815" target="_blank" rel="noopener">Elara's source assessment</a></p></section><p class="review-score">Pending Elara review of Eevee rendering; prior r1 source motion score retained.</p>
+
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article><article class="review-card" id="current-hip_strafe_right_r1">
+<header class="review-heading"><h3>HIP strafe right</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="HIP strafe right. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>Frozen r1 baseline, rerendered through the actual Eevee rendered viewport. Original source camera, lighting, geometry and motion are unchanged. Both complete 16:9 panels are uniformly scaled without crop or spatial registration. Exact reference core and source cycle are shown twice.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Halcyon</dd></div><div><dt>Version</dt><dd>Directional r1, PR18</dd></div><div><dt>Current rendering method</dt><dd>Blender Eevee Next, foreground rendered viewport</dd></div><div><dt>Clip / action</dt><dd>hip_strafe_right_r1</dd></div><div><dt>Game binding</dt><dd>Configured current directional gameplay clip</dd></div><div><dt>Timing</dt><dd>Action frames 1-50 with repeated endpoint excluded, 49 unique frames x 2 loops, 60 fps</dd></div><div><dt>Reference</dt><dd>Exact periodic-core reference frames shown above current source render; timing correspondence only, fidelity unscored.<br>R1 / 9RRgXvRx43s, decoded native 361-409, 6.016667-6.816667 s, repeated twice</dd></div><div><dt>Source commit</dt><dd>6bbfada1242d2d6c766c52cfc30c3ab511e41669</dd></div></dl><p class="review-limitations">Source-camera comparison; not gameplay capture. This is in-sample periodic-core evidence, not an all-motion fidelity or contact approval.</p><section class="prior-source-review"><h4>Prior r1 motion review</h4><p>Elara: 46%. Prior r1 motion assessment on earlier review media; this is not an approval of new Eevee media.</p><p><a href="https://github.com/RHS059/dot_chat/pull/1#issuecomment-5970730815" target="_blank" rel="noopener">Elara's source assessment</a></p></section><p class="review-score">Pending Elara review of Eevee rendering; prior r1 source motion score retained.</p>
+
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article><article class="review-card" id="ads-v4-hip_strafe_left_r1">
+<header class="review-heading"><h3>Left ADS v4, phase-aligned comparison</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="Left ADS v4, phase-aligned comparison. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>Complete planned reference window. Original reference above, actual Eevee viewport below. The frozen v4 policy, source geometry, source camera and motion are unchanged. The same prior global phase is used throughout; no new fit, per-frame timing change, crop or spatial registration was added.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Aella (ADS v4); Halcyon (HIP r1 input)</dd></div><div><dt>Version</dt><dd>Frozen ADS v4 policy over HIP r1 baseline</dd></div><div><dt>Current rendering method</dt><dd>Blender Eevee Next, foreground rendered viewport, 8 samples</dd></div><div><dt>Clip / action</dt><dd>hip_strafe_left_r1 + held ADS v4</dd></div><div><dt>Timing</dt><dd>114 exact frames, 60 fps, 1.900 s display, pose span 1.883 s</dd></div><div><dt>Reference</dt><dd>Real R2 gameplay footage paired with unchanged v4 using its previously measured single global phase offset. This is a phase-aligned motion diagnostic, not verified full-pose correspondence.<br>R2 / 5KM0XSKxTWw, native 2892-3005, 48.200000-50.083333 s, fixed candidate phase +0.587500 s</dd></div><div><dt>Source commit</dt><dd>e46f83d84ece0c28ffbd10cf4504ed4ea0f91878</dd></div></dl><p class="review-limitations">Held-ADS moving composition only, not entry/exit or runtime gameplay. Independent matrix equivalence passed, but this does not establish visual acceptance. Elara motion review pending.</p><p class="review-score">Pending Elara review of the phase-aligned ADS v4 comparison.</p>
+
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article><article class="review-card" id="ads-v4-hip_walk_backward_r1">
+<header class="review-heading"><h3>Backward ADS v4, phase-aligned comparison</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="Backward ADS v4, phase-aligned comparison. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>Complete planned reference window. Original reference above, actual Eevee viewport below. The frozen v4 policy, source geometry, source camera and motion are unchanged. The same prior global phase is used throughout; no new fit, per-frame timing change, crop or spatial registration was added.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Aella (ADS v4); Halcyon (HIP r1 input)</dd></div><div><dt>Version</dt><dd>Frozen ADS v4 policy over HIP r1 baseline</dd></div><div><dt>Current rendering method</dt><dd>Blender Eevee Next, foreground rendered viewport, 8 samples</dd></div><div><dt>Clip / action</dt><dd>hip_walk_backward_r1 + held ADS v4</dd></div><div><dt>Timing</dt><dd>162 exact frames, 60 fps, 2.700 s display, pose span 2.683 s</dd></div><div><dt>Reference</dt><dd>Real R2 gameplay footage paired with unchanged v4 using its previously measured single global phase offset. This is a phase-aligned motion diagnostic, not verified full-pose correspondence.<br>R2 / 5KM0XSKxTWw, native 2484-2645, 41.400000-44.083333 s, fixed candidate phase +0.637500 s</dd></div><div><dt>Source commit</dt><dd>e46f83d84ece0c28ffbd10cf4504ed4ea0f91878</dd></div></dl><p class="review-limitations">Held-ADS moving composition only, not entry/exit or runtime gameplay. Independent matrix equivalence passed, but this does not establish visual acceptance. Elara motion review pending.</p><p class="review-score">Pending Elara review of the phase-aligned ADS v4 comparison.</p>
+
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article><article class="review-card" id="ads-v4-hip_walk_forward_r1">
+<header class="review-heading"><h3>Forward ADS v4, phase-aligned comparison</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="Forward ADS v4, phase-aligned comparison. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>Complete planned reference window. Original reference above, actual Eevee viewport below. The frozen v4 policy, source geometry, source camera and motion are unchanged. The same prior global phase is used throughout; no new fit, per-frame timing change, crop or spatial registration was added.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Aella (ADS v4); Halcyon (HIP r1 input)</dd></div><div><dt>Version</dt><dd>Frozen ADS v4 policy over HIP r1 baseline</dd></div><div><dt>Current rendering method</dt><dd>Blender Eevee Next, foreground rendered viewport, 8 samples</dd></div><div><dt>Clip / action</dt><dd>hip_walk_forward_r1 + held ADS v4</dd></div><div><dt>Timing</dt><dd>126 exact frames, 60 fps, 2.100 s display, pose span 2.083 s</dd></div><div><dt>Reference</dt><dd>Real R2 gameplay footage paired with unchanged v4 using its previously measured single global phase offset. This is a phase-aligned motion diagnostic, not verified full-pose correspondence.<br>R2 / 5KM0XSKxTWw, native 2298-2423, 38.300000-40.383333 s, fixed candidate phase +0.095833 s</dd></div><div><dt>Source commit</dt><dd>e46f83d84ece0c28ffbd10cf4504ed4ea0f91878</dd></div></dl><p class="review-limitations">Held-ADS moving composition only, not entry/exit or runtime gameplay. Independent matrix equivalence passed, but this does not establish visual acceptance. Elara motion review pending.</p><p class="review-score">Pending Elara review of the phase-aligned ADS v4 comparison.</p>
+
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article>
+</div>
+</section>
+<section class="gallery-section" id="static-comparisons">
+<h2>Static pose comparison (1)</h2>
+<p class="review-summary">The two panels are a single matched pose held for inspection. This is not an animation or a motion review.</p>
+<div class="review-stack">
+<article class="review-card" id="current-pickup_pose_inspection">
+<header class="review-heading"><h3>Pickup pose, static comparison only</h3></header>
+<div class="review-media">
+<p class="panel-label">Reference above, current render below</p>
+<div class="placeholder-stack" role="img" aria-label="Pickup pose, static comparison only. Placeholder frames labeled Reference and Current render. No video.">
+<div class="frame frame-reference"><span class="frame-kicker">Reference</span><span class="frame-note">Solid placeholder frame</span></div>
+<div class="frame frame-current"><span class="frame-kicker">Current render</span><span class="frame-note">Solid placeholder frame</span></div>
+</div>
+<p class="media-note">Placeholder frames only. No video file is included.</p>
+</div>
+<div class="review-copy">
+<details class="preview-details"><summary>Details</summary>
+<div class="preview-details-content">
+<p>A single current pickup pose at native frame 54 is shown against the exact corresponding reference frame 522. Both panels are held for inspection. This contains no animation and is not evidence of a matched transition.</p><dl class="review-metadata"><div><dt>Creator</dt><dd>Unknown / not verified</dd></div><div><dt>Version</dt><dd>PR17 e46f83d8 / RD_Pose_Tactical_Pickup54_Guarded</dd></div><div><dt>Current rendering method</dt><dd>Blender Workbench diagnostic</dd></div><div><dt>Requested rendering update</dt><dd>Eevee viewport, update pending</dd></div><div><dt>Clip / action</dt><dd>pickup_pose_inspection</dd></div><div><dt>Game binding</dt><dd>Current alternate; not bound to gameplay</dd></div><div><dt>Timing</dt><dd>Frames 55-55, 60000/1001 fps, 1.001 s preview, source pose span 0.000 s, native 54-54</dd></div><div><dt>Reference</dt><dd>Verified source frame mapping<br>startFrame: 522, endFrame: 522, nativeRange: [54, 54], fps: 60000/1001, nativeZeroPTS: 7.8078, sourceSha256: 4d25c04b903c823898d44e6fc40c4c70db7660491ef27e2db4c9e1f3ee9a1aa8, verification: Original decoded frame468 scaled to 960x540 is pixel-identical to stored native0</dd></div><div><dt>Source commit</dt><dd>e46f83d84ece0c28ffbd10cf4504ed4ea0f91878</dd></div></dl>
+<p class="review-score">Static pose only, no motion score</p>
+</div></details>
+<details class="preview-comments">
+<summary>Comments</summary>
+<div class="comment-list"></div>
+<p class="comment-message">No comments yet.</p>
+<p class="comment-login-hint">Log in to add a comment.</p>
+<form class="comment-compose" hidden>
+<label>Your display name (optional)<input name="author" maxlength="100" autocomplete="nickname"></label>
+<label>Comment<textarea name="body" rows="3" maxlength="4000" required></textarea></label>
+<button type="submit">Add comment</button>
+</form>
+</details>
+</div>
+</article>
+</div>
+</section>
+<section class="gallery-section" id="uploaded-previews" hidden aria-live="polite"></section>
+<section class="gallery-section authoring-download" id="authoring-file">
+<div>
+<span class="old-tag">old snapshot</span>
+<h2>Blender authoring master, v7</h2>
+<p>Preserved v7 authoring snapshot with the rig and animation work. The live gallery offered this as one Blender file. This replica does not include that file.</p>
+<p class="download-meta">Work in progress, 8,247,987 bytes, file not included</p>
+<details class="download-integrity">
+<summary>Verify file integrity</summary>
+<p>SHA-256 of the live snapshot, not stored in this repo: <code>8cec36c6bfcc4967cb80629b40ecdced3c0b5507914aec7eb3d2d614f2d758fd</code></p>
+</details>
+</div>
+<button class="download-button" type="button" disabled>Download unavailable. Blend file not included</button>
+</section>
+</main>
+</div>
+<footer class="footer">
+<div class="shell">
+<span>Rust Duty, Preview Gallery</span>
+<span>More previews and old items are not included in this replica.</span>
+</div>
+</footer>
+<dialog id="login-dialog" class="form-dialog" aria-labelledby="login-title">
+<form id="login-form">
+<div class="form-heading">
+<h2 id="login-title">Gallery login</h2>
+<button type="button" data-close aria-label="Close login">Close</button>
+</div>
+<p>This static replica does not accept a password, uploads, or status posts. Review cards stay on the page.</p>
+<label>Password<input name="password" type="password" autocomplete="current-password" minlength="12" maxlength="256" required></label>
+<p id="login-message" class="form-message" role="status"></p>
+<button type="submit" class="primary-button">Log in</button>
+</form>
+</dialog>
+</body>
+</html>

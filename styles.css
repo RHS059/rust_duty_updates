@@ -4,12 +4,12 @@
   --current: #44475a;
   --fg: #f8f8f2;
   --comment: #6272a4;
-  --cyan: #8be9fd;
+  --cyan: #15608f;
   --green: #50fa7b;
-  --orange: #ffb86c;
+  --orange: #c4510c;
   --pink: #ff79c6;
   --purple: #bd93f9;
-  --red: #ff5555;
+  --red: #d42525;
   --yellow: #f1fa8c;
   --font: "Inter", "Segoe UI", sans-serif;
 }
@@ -131,26 +131,34 @@ h1 {
   bottom: 7px;
   z-index: 2;
 }
-.glyph { width: 26px; height: 26px; display: block; }
-.glyph-aella { fill: var(--orange); }
+.glyph { width: 28px; height: 28px; display: block; }
+.glyph-aella { fill: #c4510c; stroke: #6a2b08; stroke-width: 1.2; stroke-linejoin: round; }
 .mark-halcyon {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: var(--cyan);
-  box-shadow: 0 0 0 1px rgba(40, 42, 54, 0.35);
+  background: #15608f;
+  box-shadow: 0 0 0 2px #0c3a58;
 }
+.mark-elara,
 .mark-review {
   width: 24px;
   height: 24px;
   border-radius: 4px;
-  background: linear-gradient(145deg, #6272a4 0%, #c7c9d6 48%, #f8f8f2 100%);
+  background: linear-gradient(145deg, #2a2e3d 0%, #5c6478 100%);
+  box-shadow: 0 0 0 1px #12141c;
 }
 .glyph-clock { width: 20px; height: 20px; }
-.mark-pass, .mark-fail { width: 26px; height: 26px; }
-.mark-pass { color: var(--fg); filter: drop-shadow(0 0 1px #282a36) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.85)); }
-.mark-fail { color: var(--red); filter: drop-shadow(0 0 1px #282a36); }
-.glyph-thumb { width: 24px; height: 24px; }
+.mark-pass, .mark-fail {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #14161e;
+  box-shadow: 0 0 0 1px #0c0d12;
+}
+.mark-pass { color: #f8f8f2; }
+.mark-fail { color: #d42525; }
+.glyph-thumb { width: 22px; height: 22px; }
 .right-rail { position: sticky; top: 16px; }
 .agent-card {
   border: 1px solid var(--current);
@@ -175,6 +183,9 @@ h1 {
 .agent-list strong { display: block; font-size: 15px; }
 .agent-list p { margin: 3px 0 0; color: var(--comment); font-size: 13px; }
 .agent-list .mark { margin-top: 2px; }
+.agent-list .glyph-aella { width: 26px; height: 26px; }
+.agent-list .mark-halcyon { width: 22px; height: 22px; }
+
 dialog {
   width: min(520px, calc(100% - 32px));
   background: #21222c;

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rust Duty Media</title>
-<meta name="description" content="Rust Duty placeholder media grid. No video files.">
+<meta name="description" content="Rust Duty preview grid. Clip data lives in previews.json.">
 <meta name="theme-color" content="#282a36">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,122 +14,16 @@
 </head>
 <body>
 <div class="page">
-<main class="media-column" id="media">
+<main class="media-column">
 <p class="brand-line"><span class="brand-mark" aria-hidden="true">RD</span> Rust Duty</p>
 <h1>Media</h1>
-<p class="media-note">Placeholder frames only. Colored boxes stand in for the 10 clips. No videos are hosted here.</p>
-<div class="media-grid">
-<button class="tile" type="button" data-clip="reload-current" aria-label="Reload current wip">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">Reload current wip</span>
-<span class="mark mark-aella" role="img" aria-label="Made by Aella"><svg class="glyph glyph-aella" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5.2 27.2 26.6a1.6 1.6 0 0 1-1.4 2.4H6.2a1.6 1.6 0 0 1-1.4-2.4Z"/></svg></span>
-</button>
-<button class="tile" type="button" data-clip="reload-opening" aria-label="Reload opening wip">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">Reload opening wip</span>
-<span class="mark mark-pass" role="img" aria-label="Pass"><svg class="glyph glyph-thumb" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.1 10.1V21H4.6A1.6 1.6 0 0 1 3 19.4v-7.7A1.6 1.6 0 0 1 4.6 10.1h3.5Zm1.5.15 2.9-6.05c.28-.58.86-.95 1.5-.95.95 0 1.68.86 1.52 1.8l-.55 3.15h4.55c.98 0 1.7.9 1.5 1.86l-1.25 6.15A2 2 0 0 1 17.9 21H9.6V10.25Z"/></svg></span>
-</button>
-<button class="tile" type="button" data-clip="hip-forward" aria-label="HIP walk forward">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">HIP walk forward</span>
-<span class="mark mark-halcyon" role="img" aria-label="Made by Halcyon"></span>
-</button>
-<button class="tile" type="button" data-clip="hip-backward" aria-label="HIP walk backward">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">HIP walk backward</span>
-<span class="mark mark-review" role="img" aria-label="Elara is reviewing"><svg class="glyph glyph-clock" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6.1" fill="none" stroke="#f8f8f2" stroke-width="1.7"/><path d="M12 8.3V12l2.5 1.6" fill="none" stroke="#f8f8f2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-</button>
-<button class="tile" type="button" data-clip="hip-left" aria-label="HIP strafe left">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">HIP strafe left</span>
-<span class="mark mark-halcyon" role="img" aria-label="Made by Halcyon"></span>
-</button>
-<button class="tile" type="button" data-clip="hip-right" aria-label="HIP strafe right">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">HIP strafe right</span>
-<span class="mark mark-review" role="img" aria-label="Elara is reviewing"><svg class="glyph glyph-clock" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6.1" fill="none" stroke="#f8f8f2" stroke-width="1.7"/><path d="M12 8.3V12l2.5 1.6" fill="none" stroke="#f8f8f2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-</button>
-<button class="tile" type="button" data-clip="ads-left" aria-label="Left ADS v4, phase-aligned comparison">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">Left ADS v4, phase-aligned comparison</span>
-<span class="mark mark-fail" role="img" aria-label="Fail, score 34"><svg class="glyph glyph-thumb" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.1 10.1V21H4.6A1.6 1.6 0 0 1 3 19.4v-7.7A1.6 1.6 0 0 1 4.6 10.1h3.5Zm1.5.15 2.9-6.05c.28-.58.86-.95 1.5-.95.95 0 1.68.86 1.52 1.8l-.55 3.15h4.55c.98 0 1.7.9 1.5 1.86l-1.25 6.15A2 2 0 0 1 17.9 21H9.6V10.25Z"/></svg></span>
-</button>
-<button class="tile" type="button" data-clip="ads-backward" aria-label="Backward ADS v4, phase-aligned comparison">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">Backward ADS v4, phase-aligned comparison</span>
-<span class="mark mark-fail" role="img" aria-label="Fail, score 32"><svg class="glyph glyph-thumb" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.1 10.1V21H4.6A1.6 1.6 0 0 1 3 19.4v-7.7A1.6 1.6 0 0 1 4.6 10.1h3.5Zm1.5.15 2.9-6.05c.28-.58.86-.95 1.5-.95.95 0 1.68.86 1.52 1.8l-.55 3.15h4.55c.98 0 1.7.9 1.5 1.86l-1.25 6.15A2 2 0 0 1 17.9 21H9.6V10.25Z"/></svg></span>
-</button>
-<button class="tile" type="button" data-clip="ads-forward" aria-label="Forward ADS v4, phase-aligned comparison">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">Forward ADS v4, phase-aligned comparison</span>
-<span class="mark mark-fail" role="img" aria-label="Fail, score 35"><svg class="glyph glyph-thumb" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.1 10.1V21H4.6A1.6 1.6 0 0 1 3 19.4v-7.7A1.6 1.6 0 0 1 4.6 10.1h3.5Zm1.5.15 2.9-6.05c.28-.58.86-.95 1.5-.95.95 0 1.68.86 1.52 1.8l-.55 3.15h4.55c.98 0 1.7.9 1.5 1.86l-1.25 6.15A2 2 0 0 1 17.9 21H9.6V10.25Z"/></svg></span>
-</button>
-<button class="tile" type="button" data-clip="pickup" aria-label="Pickup pose, static comparison only">
-<span class="tile-art" aria-hidden="true">
-<span class="pane pane-reference">Reference</span>
-<span class="pane pane-current">Current render</span>
-</span>
-<span class="tile-title">Pickup pose, static comparison only</span>
-<span class="mark mark-aella" role="img" aria-label="Made by Aella"><svg class="glyph glyph-aella" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5.2 27.2 26.6a1.6 1.6 0 0 1-1.4 2.4H6.2a1.6 1.6 0 0 1-1.4-2.4Z"/></svg></span>
-</button>
-</div>
+<p class="media-note" id="media-note">Loading previews.</p>
+<div class="media-grid" id="media-grid"></div>
 </main>
 <aside class="right-rail" aria-label="Agent status">
 <section class="agent-card">
 <h2>Agent status</h2>
-<ul class="agent-list">
-<li>
-<span class="mark mark-aella" aria-hidden="true"><svg class="glyph glyph-aella" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5.2 27.2 26.6a1.6 1.6 0 0 1-1.4 2.4H6.2a1.6 1.6 0 0 1-1.4-2.4Z"/></svg></span>
-<div>
-<strong>Aella</strong>
-<p>Orange rounded triangle. Made reload current, the ADS comparisons, and the pickup pose.</p>
-<p>Fail marks: ADS forward 35, ADS backward 32, ADS left 34.</p>
-</div>
-</li>
-<li>
-<span class="mark mark-halcyon" aria-hidden="true"></span>
-<div>
-<strong>Halcyon</strong>
-<p>Blue circle. Made the four HIP clips and reload opening.</p>
-<p>HIP forward and strafe left are maker-only. HIP backward and strafe right are in review. Reload opening is a sample pass.</p>
-</div>
-</li>
-<li>
-<span class="mark mark-review" aria-hidden="true"><svg class="glyph glyph-clock" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6.1" fill="none" stroke="#f8f8f2" stroke-width="1.7"/><path d="M12 8.3V12l2.5 1.6" fill="none" stroke="#f8f8f2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-<div>
-<strong>Elara</strong>
-<p>Grey-to-white square. She is the reviewer.</p>
-<p>A white clock means she is reviewing. A white thumbs up is pass. A red thumbs down is fail.</p>
-</div>
-</li>
-</ul>
+<ul class="agent-list" id="agent-list"></ul>
 </section>
 </aside>
 </div>
@@ -137,68 +31,7 @@
 <div class="sheet-bar">
 <button type="button" data-close>Close</button>
 </div>
-<div id="sheet-body">
-<article id="reload-current" hidden>
-<p class="sheet-kicker">Maker only. Aella mark.</p>
-<h2>Reload current wip</h2>
-<p>Made by Aella. Placeholder frames only. No video file.</p>
-<p>Workbench diagnostic of the current reload. Motion score is not yet assigned, so the tile keeps only the maker mark.</p>
-</article>
-<article id="reload-opening" hidden>
-<p class="sheet-kicker">Pass. White thumbs up.</p>
-<h2>Reload opening wip</h2>
-<p>Made by Halcyon. Placeholder frames only. No video file.</p>
-<p>Sample pass mark so the white thumbs up can be checked. No motion score is published for this opening.</p>
-</article>
-<article id="hip-forward" hidden>
-<p class="sheet-kicker">Maker only. Halcyon mark.</p>
-<h2>HIP walk forward</h2>
-<p>Made by Halcyon. Placeholder frames only. No video file.</p>
-<p>Directional r1 HIP walk. Maker mark only. No new score.</p>
-</article>
-<article id="hip-backward" hidden>
-<p class="sheet-kicker">In review. Elara square with a white clock.</p>
-<h2>HIP walk backward</h2>
-<p>Made by Halcyon. Placeholder frames only. No video file.</p>
-<p>Elara is reviewing this HIP walk. The clock sits on her square. No new score.</p>
-</article>
-<article id="hip-left" hidden>
-<p class="sheet-kicker">Maker only. Halcyon mark.</p>
-<h2>HIP strafe left</h2>
-<p>Made by Halcyon. Placeholder frames only. No video file.</p>
-<p>Directional r1 strafe. Maker mark only. No new score.</p>
-</article>
-<article id="hip-right" hidden>
-<p class="sheet-kicker">In review. Elara square with a white clock.</p>
-<h2>HIP strafe right</h2>
-<p>Made by Halcyon. Placeholder frames only. No video file.</p>
-<p>Elara is reviewing this HIP strafe. The clock sits on her square. No new score.</p>
-</article>
-<article id="ads-left" hidden>
-<p class="sheet-kicker">Fail. Red thumbs down. Motion score 34.</p>
-<h2>Left ADS v4, phase-aligned comparison</h2>
-<p>Made by Aella. Placeholder frames only. No video file.</p>
-<p>Phase-aligned ADS v4 over the left strafe. Fail mark uses the known motion score.</p>
-</article>
-<article id="ads-backward" hidden>
-<p class="sheet-kicker">Fail. Red thumbs down. Motion score 32.</p>
-<h2>Backward ADS v4, phase-aligned comparison</h2>
-<p>Made by Aella. Placeholder frames only. No video file.</p>
-<p>Phase-aligned ADS v4 over the backward walk. Fail mark uses the known motion score.</p>
-</article>
-<article id="ads-forward" hidden>
-<p class="sheet-kicker">Fail. Red thumbs down. Motion score 35.</p>
-<h2>Forward ADS v4, phase-aligned comparison</h2>
-<p>Made by Aella. Placeholder frames only. No video file.</p>
-<p>Phase-aligned ADS v4 over the forward walk. Fail mark uses the known motion score.</p>
-</article>
-<article id="pickup" hidden>
-<p class="sheet-kicker">Maker only. Aella mark.</p>
-<h2>Pickup pose, static comparison only</h2>
-<p>Made by Aella. Placeholder frames only. No video file.</p>
-<p>One held pose, not a motion review. Maker mark only. No motion score.</p>
-</article>
-</div>
+<div id="sheet-body"></div>
 </dialog>
 </body>
 </html>

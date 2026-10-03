@@ -46,11 +46,11 @@
     return el;
   };
 
-  const priorHipScore = {
-    "HIP walk forward": 64,
-    "HIP walk backward": 41,
-    "HIP strafe left": 58,
-    "HIP strafe right": 46
+  const priorHipScores = {
+    "HIP walk forward": [64, 74],
+    "HIP walk backward": [41, 68],
+    "HIP strafe left": [58, 54],
+    "HIP strafe right": [46, 72]
   };
 
   const scoredSeries = (clips) => {
@@ -66,8 +66,14 @@
     }
     return order.map((name, index) => {
       const scores = groups.get(name).slice();
-      const prior = priorHipScore[name];
-      if (typeof prior === "number" && scores[0] !== prior) scores.unshift(prior);
+      const prior = priorHipScores[name];
+      if (prior && !prior.every((score, i) => scores[i] === score)) {
+        const merged = prior.slice();
+        for (const score of scores) {
+          if (merged[merged.length - 1] !== score) merged.push(score);
+        }
+        scores.splice(0, scores.length, ...merged);
+      }
       return {
         name,
         scores,

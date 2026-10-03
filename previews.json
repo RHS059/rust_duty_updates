@@ -75,6 +75,18 @@
       "detail": ""
     },
     {
+      "id": "jump-r1",
+      "title": "Jump",
+      "maker": "halcyon",
+      "review": "fail",
+      "score": 62,
+      "motion": "Jump",
+      "passCriterion": "Grow takeoff and landing held-rig extrema on the existing beats so jump weight reads clearly on the fixed camera. Keep the quiet extendable air hold and the takeoff/air/land Action split.",
+      "video": "media/jump-r1.mp4",
+      "sample": false,
+      "detail": ""
+    },
+    {
       "id": "ads-forward",
       "title": "Forward ADS v4",
       "maker": "aella",

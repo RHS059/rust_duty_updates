@@ -131,6 +131,18 @@
       "detail": "ADS v4 over the unchanged HIP right baseline."
     },
     {
+      "id": "ads-v5-forward",
+      "title": "Forward ADS v5 trial 1",
+      "maker": "aella",
+      "review": "maker",
+      "score": null,
+      "motion": null,
+      "passCriterion": null,
+      "video": null,
+      "sample": false,
+      "detail": "New forward ADS candidate. Not scored yet. Maker mark only until the review is posted."
+    },
+    {
       "id": "pickup",
       "title": "Pickup pose, static comparison only",
       "maker": "aella",

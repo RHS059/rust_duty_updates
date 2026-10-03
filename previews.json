@@ -4,7 +4,7 @@
   "clips": [
     {
       "id": "reload-current",
-      "title": "Reload current wip",
+      "title": "Reload current",
       "maker": "aella",
       "review": "maker",
       "score": null,
@@ -12,11 +12,11 @@
       "passCriterion": null,
       "video": "media/2026-10-03-reload_current_wip-eevee-studio-reference.mp4",
       "sample": false,
-      "detail": "Current reload."
+      "detail": ""
     },
     {
       "id": "reload-opening",
-      "title": "Reload opening wip",
+      "title": "Reload opening",
       "maker": "halcyon",
       "review": "pass",
       "score": null,
@@ -24,7 +24,7 @@
       "passCriterion": null,
       "video": null,
       "sample": true,
-      "detail": "Reload opening."
+      "detail": ""
     },
     {
       "id": "hip-forward",
@@ -36,7 +36,7 @@
       "passCriterion": "Keep the step timing and the vertical size. Add the reference side travel. The path is too straight.",
       "video": "media/hip-forward-r3.mp4",
       "sample": false,
-      "detail": "HIP walk forward."
+      "detail": ""
     },
     {
       "id": "hip-backward",
@@ -48,7 +48,7 @@
       "passCriterion": "Keep the side sway and its timing. Add the reference vertical drop and roll.",
       "video": "media/hip-backward-r3.mp4",
       "sample": false,
-      "detail": "HIP walk backward."
+      "detail": ""
     },
     {
       "id": "hip-left",
@@ -60,7 +60,7 @@
       "passCriterion": "Keep the leftward direction. Restore the rightward travel and the dip.",
       "video": "media/hip-left.mp4",
       "sample": false,
-      "detail": "HIP strafe left."
+      "detail": ""
     },
     {
       "id": "hip-right",
@@ -72,11 +72,11 @@
       "passCriterion": "Keep the left-then-right timing. Extend the side travel and match the roll.",
       "video": "media/hip-right.mp4",
       "sample": false,
-      "detail": "HIP strafe right."
+      "detail": ""
     },
     {
       "id": "ads-forward",
-      "title": "Forward ADS v4, phase-aligned comparison",
+      "title": "Forward ADS v4",
       "maker": "aella",
       "review": "fail",
       "score": 35,
@@ -84,11 +84,11 @@
       "passCriterion": "It needs its own ADS walk, sights locked on center, almost no side yaw, and a tighter vertical bounce.",
       "video": "media/2026-10-03-ads-v4-hip_walk_forward_r1-eevee-reference-126f.mp4",
       "sample": false,
-      "detail": "ADS walk forward."
+      "detail": ""
     },
     {
       "id": "ads-backward",
-      "title": "Backward ADS v4, phase-aligned comparison",
+      "title": "Backward ADS v4",
       "maker": "aella",
       "review": "fail",
       "score": 32,
@@ -96,11 +96,11 @@
       "passCriterion": "It needs its own ADS walk backward, sights locked on center, and a path that reads as backward instead of a wide figure-8.",
       "video": "media/2026-10-03-ads-v4-hip_walk_backward_r1-eevee-reference-162f.mp4",
       "sample": false,
-      "detail": "ADS walk backward."
+      "detail": ""
     },
     {
       "id": "ads-left",
-      "title": "Left ADS v4, phase-aligned comparison",
+      "title": "Left ADS v4",
       "maker": "aella",
       "review": "fail",
       "score": 34,
@@ -108,11 +108,11 @@
       "passCriterion": "It needs its own ADS strafe left, sights locked on center, and no rightward overshoot.",
       "video": "media/2026-10-03-ads-v4-hip_strafe_left_r1-eevee-reference-114f.mp4",
       "sample": false,
-      "detail": "ADS strafe left."
+      "detail": ""
     },
     {
       "id": "ads-right",
-      "title": "Right ADS v4, phase-aligned comparison",
+      "title": "Right ADS v4",
       "maker": "aella",
       "review": "fail",
       "score": 33,
@@ -120,7 +120,7 @@
       "passCriterion": "It needs its own ADS strafe, sights locked on center, a rightward path with no left overshoot, and a fast shallow bounce.",
       "video": "media/2026-10-03-ads-v4-hip_strafe_right_r1-eevee-reference-84f.mp4",
       "sample": false,
-      "detail": "ADS strafe right."
+      "detail": ""
     },
     {
       "id": "ads-v5-forward",
@@ -132,7 +132,7 @@
       "passCriterion": "Keep the sight lock. Restore a dedicated ADS forward walk with the reference's shallow footfall and cadence. The bottom is nearly still.",
       "video": "media/2026-10-03-ads-v5-trial1-hip_walk_forward_r1-eevee-reference-126f.mp4",
       "sample": false,
-      "detail": "ADS walk forward."
+      "detail": ""
     },
     {
       "id": "ads-v6-forward",
@@ -148,7 +148,7 @@
     },
     {
       "id": "pickup",
-      "title": "Pickup pose, static comparison only",
+      "title": "Pickup pose",
       "maker": "aella",
       "review": "maker",
       "score": null,
@@ -156,7 +156,7 @@
       "passCriterion": null,
       "video": "media/2026-10-03-pickup_pose_inspection-eevee-studio-reference.mp4",
       "sample": false,
-      "detail": "Pickup pose."
+      "detail": ""
     }
   ],
   "showWithoutVideo": false

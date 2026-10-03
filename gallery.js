@@ -18,19 +18,12 @@
       return `<span class="mark mark-fail" role="img" aria-label="${score}">${THUMB_DOWN}</span>`;
     }
     if (clip.maker === "halcyon") {
-      return `<span class="mark mark-halcyon" role="img" aria-label="Made by Halcyon"></span>`;
+      return `<span class="mark mark-halcyon" role="img" aria-label="Halcyon"></span>`;
     }
     if (clip.maker === "elara") {
-      return `<span class="mark mark-elara" role="img" aria-label="Made by Elara"></span>`;
+      return `<span class="mark mark-elara" role="img" aria-label="Elara"></span>`;
     }
-    return `<span class="mark mark-aella" role="img" aria-label="Made by Aella">${AELLA}</span>`;
-  };
-
-  const kicker = (clip) => {
-    if (clip.review === "reviewing") return "In review. Elara square with a white clock.";
-    if (clip.review === "pass") return clip.sample ? "Sample pass. White thumbs up. No published score." : `Pass. White thumbs up.${clip.score == null ? "" : ` Score ${clip.score}.`}`;
-    if (clip.review === "fail") return `Fail. Red thumbs down.${clip.score == null ? "" : ` Motion score ${clip.score}.`}`;
-    return `Maker only. ${makerName[clip.maker] || "Maker"} mark.`;
+    return `<span class="mark mark-aella" role="img" aria-label="Aella">${AELLA}</span>`;
   };
 
   const grid = document.querySelector("#media-grid");
@@ -68,9 +61,6 @@
       const article = document.createElement("article");
       article.id = clip.id;
       article.hidden = true;
-      const k = document.createElement("p");
-      k.className = "sheet-kicker";
-      k.textContent = kicker(clip);
       const h = document.createElement("h2");
       h.textContent = clip.title;
       if (clip.video) {
@@ -82,16 +72,7 @@
         video.playsInline = true;
         article.append(video);
       }
-      const made = document.createElement("p");
-      made.textContent = `Made by ${makerName[clip.maker] || clip.maker}. ${clip.video ? "" : "No video file yet."}`.trim();
-      const detail = document.createElement("p");
-      detail.textContent = clip.detail || "";
-      article.append(k, h, made, detail);
-      if (clip.motion && clip.score != null) {
-        const score = document.createElement("p");
-        score.textContent = `Motion: ${clip.motion}. Score: ${clip.score}. ${clip.passCriterion || ""}`;
-        article.append(score);
-      }
+      article.append(h);
       sheet.append(article);
     }
 

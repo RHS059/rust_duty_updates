@@ -58,7 +58,7 @@
       "score": 54,
       "motion": "HIP strafe left",
       "passCriterion": "Keep the leftward direction. Restore the rightward travel and the dip.",
-      "video": "media/hip-left.mp4",
+      "video": "media/hip-left-r3.mp4",
       "sample": false,
       "detail": ""
     },

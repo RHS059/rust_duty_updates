@@ -267,6 +267,30 @@
       "detail": ""
     },
     {
+      "id": "ads-lateral-trial4-left",
+      "title": "Left ADS lateral trial 4",
+      "maker": "aella",
+      "review": "maker",
+      "score": null,
+      "motion": null,
+      "passCriterion": null,
+      "video": null,
+      "sample": false,
+      "detail": ""
+    },
+    {
+      "id": "ads-lateral-trial4-right",
+      "title": "Right ADS lateral trial 4",
+      "maker": "aella",
+      "review": "maker",
+      "score": null,
+      "motion": null,
+      "passCriterion": null,
+      "video": null,
+      "sample": false,
+      "detail": ""
+    },
+    {
       "id": "pickup",
       "title": "Pickup pose",
       "maker": "aella",

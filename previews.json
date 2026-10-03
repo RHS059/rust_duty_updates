@@ -141,7 +141,7 @@
       "review": "fail",
       "score": 53,
       "motion": "ADS walk forward",
-      "passCriterion": "Keep the sight lock. Restore a dedicated ADS forward walk with the reference\u2019s shallow, sharp footfall and cadence. The bottom is still nearly still.",
+      "passCriterion": "Keep the sight lock. Restore a dedicated ADS forward walk with the reference’s shallow, sharp footfall and cadence. The bottom is still nearly still.",
       "video": "media/2026-10-03-ads-v6-trial1-hip_walk_forward_r1-eevee-reference-126f.mp4",
       "sample": false,
       "detail": ""
@@ -166,7 +166,7 @@
       "score": null,
       "motion": null,
       "passCriterion": null,
-      "video": null,
+      "video": "media/2026-10-03-ads-v8-articulation15-forward-public47-r5-eevee-reference-126f.mp4",
       "sample": false,
       "detail": ""
     },

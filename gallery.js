@@ -51,7 +51,7 @@
     "HIP walk backward": [41, 68, 76, 78],
     "HIP strafe left": [58, 54, 79, 78],
     "HIP strafe right": [46, 72, 77, 78],
-    "Jump": [62]
+    "Jump": [62, 71]
   };
 
   const scoredSeries = (clips) => {

@@ -135,6 +135,18 @@
       "detail": "ADS walk forward."
     },
     {
+      "id": "ads-v6-forward",
+      "title": "Forward ADS v6 trial 1",
+      "maker": "aella",
+      "review": "maker",
+      "score": null,
+      "motion": null,
+      "passCriterion": null,
+      "video": null,
+      "sample": false,
+      "detail": "ADS walk forward."
+    },
+    {
       "id": "pickup",
       "title": "Pickup pose, static comparison only",
       "maker": "aella",

@@ -28,6 +28,161 @@
 
   const grid = document.querySelector("#media-grid");
   const note = document.querySelector("#media-note");
+  const trendHost = document.querySelector("#score-trend");
+  const trendColors = [
+    "var(--pink)",
+    "var(--purple)",
+    "var(--green)",
+    "var(--yellow)",
+    "var(--fg)",
+    "var(--red)",
+    "var(--orange)",
+    "var(--comment)"
+  ];
+
+  const svgEl = (name, attrs) => {
+    const el = document.createElementNS("http://www.w3.org/2000/svg", name);
+    for (const [key, value] of Object.entries(attrs)) el.setAttribute(key, String(value));
+    return el;
+  };
+
+  const scoredSeries = (clips) => {
+    const order = [];
+    const groups = new Map();
+    for (const clip of clips) {
+      if (typeof clip.score !== "number" || !clip.motion) continue;
+      if (!groups.has(clip.motion)) {
+        groups.set(clip.motion, []);
+        order.push(clip.motion);
+      }
+      groups.get(clip.motion).push(clip.score);
+    }
+    return order.map((name, index) => ({
+      name,
+      scores: groups.get(name),
+      color: trendColors[index % trendColors.length]
+    }));
+  };
+
+  const renderTrend = (clips) => {
+    if (!trendHost) return;
+    const series = scoredSeries(clips);
+    trendHost.replaceChildren();
+    if (!series.length) {
+      trendHost.hidden = true;
+      return;
+    }
+    trendHost.hidden = false;
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Score trend";
+    const caption = document.createElement("p");
+    caption.className = "trend-note";
+    caption.textContent = "Each dot is one scored revision. Pass is above 80.";
+    trendHost.append(heading, caption);
+
+    const width = 640;
+    const height = 228;
+    const pad = { l: 36, r: 12, t: 14, b: 28 };
+    const plotW = width - pad.l - pad.r;
+    const plotH = height - pad.t - pad.b;
+    const yMax = 100;
+    const maxN = Math.max(...series.map((item) => item.scores.length));
+    const xOf = (index) => maxN <= 1 ? pad.l + plotW / 2 : pad.l + (index / (maxN - 1)) * plotW;
+    const yOf = (score) => pad.t + (1 - score / yMax) * plotH;
+
+    const svg = svgEl("svg", {
+      viewBox: `0 0 ${width} ${height}`,
+      role: "img",
+      "aria-label": series.map((item) => `${item.name}: ${item.scores.join(", ")}`).join(". ")
+    });
+
+    for (const tick of [0, 20, 40, 60, 80, 100]) {
+      const y = yOf(tick);
+      const gridLine = svgEl("line", {
+        x1: pad.l,
+        x2: width - pad.r,
+        y1: y,
+        y2: y,
+        stroke: tick === 80 ? "var(--comment)" : "var(--current)",
+        "stroke-width": tick === 80 ? 1.25 : 1,
+        "stroke-dasharray": tick === 80 ? "4 4" : "0"
+      });
+      svg.append(gridLine);
+      const label = svgEl("text", {
+        x: pad.l - 8,
+        y: y + 4,
+        fill: "var(--comment)",
+        "font-size": 11,
+        "text-anchor": "end"
+      });
+      label.textContent = String(tick);
+      svg.append(label);
+    }
+
+    for (let index = 0; index < maxN; index += 1) {
+      const label = svgEl("text", {
+        x: xOf(index),
+        y: height - 8,
+        fill: "var(--comment)",
+        "font-size": 11,
+        "text-anchor": "middle"
+      });
+      label.textContent = String(index + 1);
+      svg.append(label);
+    }
+
+    for (const item of series) {
+      if (item.scores.length < 2) continue;
+      const points = item.scores.map((score, index) => `${xOf(index)},${yOf(score)}`).join(" ");
+      svg.append(svgEl("polyline", {
+        points,
+        fill: "none",
+        stroke: item.color,
+        "stroke-width": 2,
+        "stroke-linejoin": "round",
+        "stroke-linecap": "round"
+      }));
+    }
+
+    for (const item of series) {
+      item.scores.forEach((score, index) => {
+        const dot = svgEl("circle", {
+          cx: xOf(index),
+          cy: yOf(score),
+          r: 4,
+          fill: item.color,
+          stroke: "var(--bg)",
+          "stroke-width": 1.5
+        });
+        const tip = svgEl("title", {});
+        tip.textContent = `${item.name} ${score}`;
+        dot.append(tip);
+        svg.append(dot);
+      });
+    }
+
+    const plot = document.createElement("div");
+    plot.className = "trend-plot";
+    plot.append(svg);
+    trendHost.append(plot);
+
+    const legend = document.createElement("ul");
+    legend.className = "trend-legend";
+    for (const item of series) {
+      const li = document.createElement("li");
+      const swatch = document.createElement("span");
+      swatch.className = "trend-swatch";
+      swatch.style.background = item.color;
+      swatch.setAttribute("aria-hidden", "true");
+      const name = document.createElement("span");
+      name.textContent = item.name;
+      li.append(swatch, name);
+      legend.append(li);
+    }
+    trendHost.append(legend);
+  };
+
   const agents = document.querySelector("#agent-list");
   const dialog = document.querySelector("#clip-dialog");
   const sheet = document.querySelector("#sheet-body");
@@ -40,6 +195,7 @@
   };
 
   const render = (data) => {
+    renderTrend(data.clips || []);
     const clips = (data.clips || []).filter((clip) => data.showWithoutVideo !== false || clip.video);
     const ready = clips.filter((clip) => clip.video).length;
     note.textContent = ready ? `${ready} of ${clips.length} clips have a video.` : "No videos yet. The colored tiles are placeholders until a file is set in previews.json.";

@@ -63,6 +63,41 @@ h1 {
   color: var(--comment);
   font-size: 13px;
 }
+.score-trend { margin: 0 0 18px; }
+.score-trend h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.trend-note {
+  margin: 0 0 8px;
+  color: var(--comment);
+  font-size: 13px;
+}
+.trend-plot svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-family: var(--font);
+}
+.trend-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.trend-legend li { display: flex; align-items: center; gap: 6px; }
+.trend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
 .media-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

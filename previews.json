@@ -75,13 +75,13 @@
       "detail": ""
     },
     {
-      "id": "jump-r4",
+      "id": "jump-r5",
       "title": "Jump",
       "maker": "halcyon",
       "review": "fail",
-      "score": 74,
+      "score": 76,
       "motion": "Jump",
-      "passCriterion": "On the existing land beats, match the COD weapon land dip depth and recovery shoulders while keeping the takeoff dip and raised air hold on their current frames.",
+      "passCriterion": "On the existing land beats, deepen the COD weapon land dip and recovery shoulders further while keeping the takeoff dip and raised air hold on their current frames.",
       "video": "media/jump_animation.mp4",
       "sample": false,
       "detail": ""

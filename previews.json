@@ -31,9 +31,9 @@
       "title": "HIP walk forward",
       "maker": "halcyon",
       "review": "fail",
-      "score": 61,
+      "score": 74,
       "motion": "HIP walk forward",
-      "passCriterion": "Put the side peaks in time with the reference and bring the vertical pulse back up.",
+      "passCriterion": "Keep the step timing and the vertical size. Add the reference side travel. The path is too straight.",
       "video": "media/hip-forward.mp4",
       "sample": false,
       "detail": "HIP walk forward."

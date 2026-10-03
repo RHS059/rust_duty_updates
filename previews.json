@@ -154,5 +154,6 @@
       "sample": false,
       "detail": "One held pose, not a motion review. Maker mark only. No motion score."
     }
-  ]
+  ],
+  "showWithoutVideo": false
 }

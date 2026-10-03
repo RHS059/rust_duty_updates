@@ -47,7 +47,7 @@
   };
 
   const render = (data) => {
-    const clips = data.clips || [];
+    const clips = (data.clips || []).filter((clip) => data.showWithoutVideo !== false || clip.video);
     const ready = clips.filter((clip) => clip.video).length;
     note.textContent = ready ? `${ready} of ${clips.length} clips have a video.` : "No videos yet. The colored tiles are placeholders until a file is set in previews.json.";
     grid.replaceChildren();

@@ -34,7 +34,7 @@
       "score": 74,
       "motion": "HIP walk forward",
       "passCriterion": "Keep the step timing and the vertical size. Add the reference side travel. The path is too straight.",
-      "video": "media/hip-forward.mp4",
+      "video": "media/hip-forward-r3.mp4",
       "sample": false,
       "detail": "HIP walk forward."
     },

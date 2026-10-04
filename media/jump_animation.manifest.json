@@ -1,9 +1,9 @@
 {
   "schema": "rust-duty-jump-reference-paired-preview/v1",
-  "revision": "r6",
+  "revision": "r7",
   "video": "media/jump_animation.mp4",
-  "sha256": "6ce1ba3bfea796fcdce800c04a8cbfd5602e1fad2a88408df29593d43848dec4",
-  "bytes": 1478696,
+  "sha256": "9584dd3e3c852ff810caa608d3c7afd003b19d3b5548302a326e6d87c0f29b3e",
+  "bytes": 1493393,
   "frames": 100,
   "fps": 60,
   "duration_seconds": 1.6666666666666667,
@@ -12,9 +12,9 @@
   "layout": "COD reference above / genuine Eevee Viewport Render Animation below",
   "source": {
     "repository": "RHS059/rust_duty",
-    "commit": "23978545b8f26ccd3345d30af353c03ad55b9078",
+    "commit": "4363837e46ee89b5ca8baa1b5c08e1e3f81cac91",
     "path": "assets/authoring/jump/halcyon_jump.blend",
-    "sha256": "26f8d676ad13e19c74721575fffca75d2a0b25f1bad279b4bb03b7e87f4eeb65"
+    "sha256": "a2c4b2bbe98da1a608450bba92404cb39008eae5861bcf8fc3f5d2f978df0e3b"
   },
   "reference": {
     "repository": "RHS059/rust_duty",
@@ -29,8 +29,8 @@
   },
   "mapping": {
     "path": "assets/authoring/jump/reference_frame_map.json",
-    "commit": "23978545b8f26ccd3345d30af353c03ad55b9078",
-    "sha256": "fff505a886825a59cd0a3f36aa61de30f57fd9c5fb43cf79231cea949c9129c6",
+    "commit": "4363837e46ee89b5ca8baa1b5c08e1e3f81cac91",
+    "sha256": "58fa76a590d6f2c519f7b535938d09e985ce07a007ab4f48fc9f68de64d1f599",
     "one_to_one_native_speed": true,
     "playback_retimed": false
   },
@@ -49,5 +49,5 @@
     "COD retains the actual world/camera arc; Blender camera remains fixed",
     "No runtime behavior or ADS composition acceptance is claimed"
   ],
-  "artistic_review": "Pending Elara reference-paired r6 review; no score claimed"
+  "artistic_review": "Pending Elara reference-paired r7 review; no score claimed"
 }

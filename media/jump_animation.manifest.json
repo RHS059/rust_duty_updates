@@ -1,9 +1,9 @@
 {
   "schema": "rust-duty-jump-reference-paired-preview/v1",
-  "revision": "r5",
+  "revision": "r6",
   "video": "media/jump_animation.mp4",
-  "sha256": "2f5c224c76d41b68ea505246b3265b53712d7f9d19ca6b622aeeaddf54d30eb6",
-  "bytes": 1485945,
+  "sha256": "6ce1ba3bfea796fcdce800c04a8cbfd5602e1fad2a88408df29593d43848dec4",
+  "bytes": 1478696,
   "frames": 100,
   "fps": 60,
   "duration_seconds": 1.6666666666666667,
@@ -12,9 +12,9 @@
   "layout": "COD reference above / genuine Eevee Viewport Render Animation below",
   "source": {
     "repository": "RHS059/rust_duty",
-    "commit": "f20ae559b36a72ff34e67515579061e38315abd9",
+    "commit": "23978545b8f26ccd3345d30af353c03ad55b9078",
     "path": "assets/authoring/jump/halcyon_jump.blend",
-    "sha256": "fe47ec2961214252d831e7da743d3145b3ab219043d5a8db9622d3c387b1fa53"
+    "sha256": "26f8d676ad13e19c74721575fffca75d2a0b25f1bad279b4bb03b7e87f4eeb65"
   },
   "reference": {
     "repository": "RHS059/rust_duty",
@@ -29,8 +29,8 @@
   },
   "mapping": {
     "path": "assets/authoring/jump/reference_frame_map.json",
-    "commit": "f20ae559b36a72ff34e67515579061e38315abd9",
-    "sha256": "e12d0dd88a5d1b0c454ee534fa672a657a61dcdc42c1db7e973746ba296e8dab",
+    "commit": "23978545b8f26ccd3345d30af353c03ad55b9078",
+    "sha256": "fff505a886825a59cd0a3f36aa61de30f57fd9c5fb43cf79231cea949c9129c6",
     "one_to_one_native_speed": true,
     "playback_retimed": false
   },
@@ -49,5 +49,5 @@
     "COD retains the actual world/camera arc; Blender camera remains fixed",
     "No runtime behavior or ADS composition acceptance is claimed"
   ],
-  "artistic_review": "Elara reference-paired r5: Fail 76. Land dip deeper than r4 but still short of COD trough depth and recovery shoulders. Takeoff dip and raised air hold retained. Pass needs above 80."
+  "artistic_review": "Pending Elara reference-paired r6 review; no score claimed"
 }

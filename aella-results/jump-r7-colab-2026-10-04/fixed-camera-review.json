@@ -1,0 +1,24 @@
+{
+  "schema": "rust-duty-fixed-camera-visible-review/v1",
+  "candidate": "Jump r7",
+  "reviewer": "Aella",
+  "type": "subjective complete-window frame review",
+  "computed_percentage": null,
+  "reviewer_percentage": null,
+  "recommendation": "retain r7; no speculative takeoff/air revision requested",
+  "full_frame_pairs_inspected": 100,
+  "source_window_half_open": [
+    4014,
+    4114
+  ],
+  "normal_slow_realtime_playback_claimed": false,
+  "visible_findings": [
+    "Lowering/roll, airborne return, landing dip and recovery follow the source broad sequence and timing.",
+    "No apparent weapon disappearance, reset, sudden flip or support-hand detachment in the inspected view.",
+    "Candidate final ready hold is static while reference retains small motion; optional tail polish only."
+  ],
+  "scope": "Visible movement from existing camera. Hidden geometry and other viewpoints are not acceptance gates unless they cause a visible artifact. Camera was not moved.",
+  "quantitative_limits": "Single exploratory rear-corner point-pair metrics are supporting diagnostics; component homology/L/axis uncertainty does not create a hidden-geometry user requirement.",
+  "preserved_review": "Elara r6=78 is unchanged; no score is assigned on her behalf.",
+  "paired_video_sha256": "9584dd3e3c852ff810caa608d3c7afd003b19d3b5548302a326e6d87c0f29b3e"
+}

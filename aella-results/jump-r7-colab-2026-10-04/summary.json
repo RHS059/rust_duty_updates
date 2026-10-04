@@ -30,7 +30,8 @@
     "normal_and_slow_playback_reviewed": false,
     "muzzle_axis_and_third_anchor_supported": false,
     "normalization_L_supported": false,
-    "original_report_landmark_label": "charging_handle_right_upper_corner; retained as original code label, not certified physical identity"
+    "original_report_landmark_label": "charging_handle_right_upper_corner; retained as original code label, not certified physical identity",
+    "scope_note": "This section describes the original Colab diagnostic inspection. Later complete fixed-view reviews are separate below."
   },
   "measurements": {
     "raw_rms_px": 68.9448694572321,
@@ -107,7 +108,6 @@
     "Third agreed noncollinear rigid anchor",
     "Reference normalization L and normalized spatial thresholds",
     "Frozen event scoring contract",
-    "Full-clip normal/slow playback",
     "Game runtime review"
   ],
   "provenance": {
@@ -120,5 +120,33 @@
     "metrics_match_local_exactly": true,
     "paired_video_sha256": "9584dd3e3c852ff810caa608d3c7afd003b19d3b5548302a326e6d87c0f29b3e",
     "paired_video_gallery_commit": "84e9ed1bacf56a12243e7668a672a0ba0e76ec83"
+  },
+  "subsequent_visual_reviews": {
+    "independent_review": {
+      "status": "pass",
+      "judgment": "Approximately 80% visible-motion match as a qualitative reviewer judgment",
+      "reviewer": "Hal independent remaining-movement review lane",
+      "computed_percentage": null,
+      "elara_score": false,
+      "source_url": "https://github.com/RHS059/rust_duty/blob/b303f9901519050cc81ac6a6af730e049f27db34/docs/verification/remaining_movement_hal/JUMP_R7_FIXED_VIEW_VISUAL_REVIEW.md",
+      "complete_playback_rates": [
+        1,
+        0.5
+      ],
+      "native_paired_frames_inspected": 100,
+      "scope": "Delivered fixed first-person camera; visible weapon movement and visible hand relationship"
+    },
+    "aella_review": {
+      "recommendation": "retain r7; optional static-tail polish only",
+      "native_paired_frames_inspected": 100,
+      "normal_slow_realtime_playback_claimed": false,
+      "source_url": "https://github.com/RHS059/rust_duty/blob/e85504140522801ce65308301f61e3ccbdc66828/docs/verification/movement_comparison/jump_r7/VISIBLE_MOTION_REVIEW.md",
+      "data": "fixed-camera-review.json"
+    },
+    "remaining_functional_checks": [
+      "export/reload",
+      "game-runtime behavior"
+    ],
+    "existing_gallery_reviews_unchanged": true
   }
 }

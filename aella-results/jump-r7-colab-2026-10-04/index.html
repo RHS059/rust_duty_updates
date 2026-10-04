@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Jump r7 · Colab diagnostics · Rust Duty</title>
-<meta name="description" content="Actual Colab CPU motion measurements for the Jump r7 Eevee preview. One receiver point, 100 frames, no score or full-animation approval.">
+<title>Jump r7 · Colab results and visual review · Rust Duty</title>
+<meta name="description" content="Jump r7 Colab diagnostics and a separately labeled independent fixed-view visual pass. No computed match percentage; game-runtime checks remain.">
 <meta name="theme-color" content="#282a36">
 <link rel="stylesheet" href="../../styles.css">
 <style>
@@ -16,15 +16,25 @@
 <main class="report">
 <a class="back" href="../../">← Back to media gallery</a>
 <p class="kicker">Aella · Motion measurements · 4 October 2026</p>
-<h1>Jump r7: Colab results</h1>
+<h1>Jump r7: Colab results and visual review</h1>
 <p class="summary">The actual Colab CPU run completed on the mapped 100-frame Jump window. Its numerical results match the local run exactly. The comparison covers one visible rear weapon corner on Halcyon’s existing Eevee preview.</p>
-<p><span class="badge">Diagnostic only · No score</span></p>
+<p><span class="badge">Colab diagnostic · No computed score</span></p>
 <div class="metrics" aria-label="Key measurements">
 <div class="metric"><strong>100 / 100</strong><span>Comparable frames for one rear weapon corner</span></div>
 <div class="metric"><strong>6.79 px</strong><span>Pre-event-baseline displacement RMS</span></div>
 <div class="metric"><strong>16 px</strong><span>Usual conservative annotation residual bound</span></div>
 </div>
-<p class="notice summary">Most measured motion differences are within the annotation uncertainty. These results do not establish an 80% match, a pass, or complete weapon-motion approval.</p>
+<p class="notice summary">Most measured motion differences are within the annotation uncertainty. The Colab numbers do not establish a computed match percentage. The separate qualitative fixed-view review below now passes the requested visible-motion target.</p>
+<section class="card" id="fixed-view-review" aria-labelledby="visual-review-title" style="border-color:var(--green)">
+<h2 id="visual-review-title">Independent fixed-view visual review: PASS</h2>
+<p><strong>Approximately 80% visible-motion match, as a qualitative reviewer judgment.</strong> This is Hal’s independent reviewer’s assessment of the delivered fixed first-person view. It is not a computed percentage or an Elara score.</p>
+<p>The reviewer watched the complete existing 100-frame paired clip at 1× and 0.5× and inspected all 100 native paired frames. Takeoff, airborne return, landing and recovery follow the visible source sequence. No clear pose reset, one-frame pop or visible support-hand release was found.</p>
+<p><strong>Recommendation: retain r7.</strong> Its final ready hold is static while the reference retains small motion. That is optional, nonblocking tail polish. Preserve the existing takeoff/air motion and source timing.</p>
+<p>Aella separately inspected all 100 fixed-view frame pairs and also recommends retaining r7. That frame review does not claim real-time 1×/0.5× playback.</p>
+<p class="notice">This pass covers the visible weapon path, apparent rotation and hand relationship from the delivered camera. Hidden geometry and other viewpoints are scope limits unless they cause a visible artifact. Export/reload and game-runtime behavior checks remain required.</p>
+<p><a href="https://github.com/RHS059/rust_duty/blob/b303f9901519050cc81ac6a6af730e049f27db34/docs/verification/remaining_movement_hal/JUMP_R7_FIXED_VIEW_VISUAL_REVIEW.md">Read the independent fixed-view review</a> · <a href="https://github.com/RHS059/rust_duty/blob/e85504140522801ce65308301f61e3ccbdc66828/docs/verification/movement_comparison/jump_r7/VISIBLE_MOTION_REVIEW.md">Read Aella’s complete-frame review</a> · <a href="fixed-camera-review.json" download>Aella review JSON</a></p>
+<p class="small muted">No animation or camera change was made for these reviews. Existing gallery scores and other reviewers’ decisions remain unchanged.</p>
+</section>
 <section class="card" aria-labelledby="preview-title">
 <h2 id="preview-title">Measured preview</h2>
 <div class="columns">
@@ -35,7 +45,7 @@
 <div>
 <p>100 output frames at 60 fps, 1.667 seconds. Source frames 4014–4113, mapped one-to-one at native speed with no playback retiming.</p>
 <p>The measured landmark is a rear weapon corner, with proposed charging-handle correspondence. Exact cross-model component homology is not certified: the source feature may instead be adjacent folded-sight or receiver geometry. The reference rifle and candidate HK416 differ, and this correspondence has not been jointly frozen for scoring.</p>
-<p>All 100 point samples were reviewed. Full-viewport inspection covered 57 frame pairs. Complete normal-speed and slow-playback review remains outstanding.</p>
+<p>The original Colab diagnostic used all 100 point samples with 57 full-viewport pairs inspected. The subsequent fixed-view reviews above cover all 100 paired frames; the independent reviewer also completed normal-speed and slow playback.</p>
 <p class="small muted">The gallery’s existing scores and reviewer assessments are separate from this unscored r7 diagnostic.</p>
 <p><a href="https://github.com/RHS059/rust_duty_updates/blob/84e9ed1bacf56a12243e7668a672a0ba0e76ec83/media/jump_animation.mp4">Immutable r7 video revision</a> · <a href="../../media/jump_animation.manifest.json">Video provenance manifest</a> · <a href="https://github.com/RHS059/rust_duty/tree/e9317f90ea171976306e2f17c111325d948ea357/assets/authoring/jump/review/r7">Eevee capture evidence</a> · <a href="https://github.com/RHS059/rust_duty/blob/4363837e46ee89b5ca8baa1b5c08e1e3f81cac91/assets/authoring/jump/halcyon_jump.blend">Pinned authored source</a></p>
 </div>
@@ -61,13 +71,13 @@
 <figure><a href="colab-residuals.png"><img class="plot" src="colab-residuals.png" width="1430" height="910" alt="Colab plot of raw and mean-centered rear-weapon-corner errors over source frames 4014 to 4113."></a><figcaption>Original Colab output, unchanged. The charging-handle name is the original code label for a proposed rear-weapon-corner correspondence; it does not certify physical component identity. Blue is the only measured trace. The muzzle and third-anchor labels in this output’s legend have no samples or plotted lines; they must not be read as zero error. This plot shows raw and mean-centered errors, not the fixed-baseline metric above.</figcaption></figure>
 </section>
 <section class="card" aria-labelledby="limits-title">
-<h2 id="limits-title">Evidence still missing</h2>
+<h2 id="limits-title">Numerical limits and remaining functional checks</h2>
 <ul>
-<li>Physical source muzzle, a third agreed noncollinear rigid anchor, and reference normalization length L. Axis, normalized spatial thresholds and full-weapon motion remain unsupported.</li>
-<li>A frozen event-scoring contract and independent complete-clip review. No percentage or artistic approval was computed.</li>
-<li>Full grip/contact, hidden motion, 3D orientation, export correctness and game-runtime review. A single 2D point cannot establish these.</li>
+<li>The numerical diagnostic has no physical source muzzle, third agreed noncollinear rigid anchor or reference normalization length L. Axis and normalized spatial thresholds remain unsupported by these measurements.</li>
+<li>No automatic percentage or pass was computed. The independent complete-clip visual judgment is separately labeled above; it does not remove the point-correspondence uncertainty.</li>
+<li>A single 2D point does not establish hidden motion, exact 3D orientation or contact. These are scope limits, not additional acceptance gates for the delivered view unless they cause a visible problem. Export/reload and game-runtime verification remain outstanding.</li>
 </ul>
-<p>Source and candidate bytes were checked locally. The Colab run consumed the measurement JSON and did not independently verify those original media bytes. No new disappearance or reset was apparent in the 57 inspected viewport pairs; unseen frames are not certified.</p>
+<p>Source and candidate bytes were checked locally. The Colab run consumed the measurement JSON and did not independently verify those original media bytes. The original 57-pair inspection is supplemented by the complete 100-frame fixed-view reviews above. No hidden geometry or other viewpoint is certified.</p>
 </section>
 <section class="card" aria-labelledby="files-title">
 <h2 id="files-title">Downloadable results and provenance</h2>

@@ -17,10 +17,10 @@
 <a class="back" href="../../">← Back to media gallery</a>
 <p class="kicker">Aella · Motion measurements · 4 October 2026</p>
 <h1>Jump r7: Colab results</h1>
-<p class="summary">The actual Colab CPU run completed on the mapped 100-frame Jump window. Its numerical results match the local run exactly. The comparison covers one visible receiver point on Halcyon’s existing Eevee preview.</p>
+<p class="summary">The actual Colab CPU run completed on the mapped 100-frame Jump window. Its numerical results match the local run exactly. The comparison covers one visible rear weapon corner on Halcyon’s existing Eevee preview.</p>
 <p><span class="badge">Diagnostic only · No score</span></p>
 <div class="metrics" aria-label="Key measurements">
-<div class="metric"><strong>100 / 100</strong><span>Comparable frames for one receiver point</span></div>
+<div class="metric"><strong>100 / 100</strong><span>Comparable frames for one rear weapon corner</span></div>
 <div class="metric"><strong>6.79 px</strong><span>Pre-event-baseline displacement RMS</span></div>
 <div class="metric"><strong>16 px</strong><span>Usual conservative annotation residual bound</span></div>
 </div>
@@ -34,7 +34,7 @@
 </figure>
 <div>
 <p>100 output frames at 60 fps, 1.667 seconds. Source frames 4014–4113, mapped one-to-one at native speed with no playback retiming.</p>
-<p>The measured landmark is the upper outer right charging-handle corner. It is a proposed corresponding point: the reference rifle and candidate HK416 have different geometry, and this correspondence has not been jointly frozen for scoring.</p>
+<p>The measured landmark is a rear weapon corner, with proposed charging-handle correspondence. Exact cross-model component homology is not certified: the source feature may instead be adjacent folded-sight or receiver geometry. The reference rifle and candidate HK416 differ, and this correspondence has not been jointly frozen for scoring.</p>
 <p>All 100 point samples were reviewed. Full-viewport inspection covered 57 frame pairs. Complete normal-speed and slow-playback review remains outstanding.</p>
 <p class="small muted">The gallery’s existing scores and reviewer assessments are separate from this unscored r7 diagnostic.</p>
 <p><a href="https://github.com/RHS059/rust_duty_updates/blob/84e9ed1bacf56a12243e7668a672a0ba0e76ec83/media/jump_animation.mp4">Immutable r7 video revision</a> · <a href="../../media/jump_animation.manifest.json">Video provenance manifest</a> · <a href="https://github.com/RHS059/rust_duty/tree/e9317f90ea171976306e2f17c111325d948ea357/assets/authoring/jump/review/r7">Eevee capture evidence</a> · <a href="https://github.com/RHS059/rust_duty/blob/4363837e46ee89b5ca8baa1b5c08e1e3f81cac91/assets/authoring/jump/halcyon_jump.blend">Pinned authored source</a></p>
@@ -58,7 +58,7 @@
 </section>
 <section class="card" aria-labelledby="plot-title">
 <h2 id="plot-title">Preserved Colab plot</h2>
-<figure><a href="colab-residuals.png"><img class="plot" src="colab-residuals.png" width="1430" height="910" alt="Colab plot of raw and mean-centered charging-handle errors over source frames 4014 to 4113."></a><figcaption>Original Colab output, unchanged. Blue is the only measured trace. The muzzle and third-anchor labels in this output’s legend have no samples or plotted lines; they must not be read as zero error. This plot shows raw and mean-centered errors, not the fixed-baseline metric above.</figcaption></figure>
+<figure><a href="colab-residuals.png"><img class="plot" src="colab-residuals.png" width="1430" height="910" alt="Colab plot of raw and mean-centered rear-weapon-corner errors over source frames 4014 to 4113."></a><figcaption>Original Colab output, unchanged. The charging-handle name is the original code label for a proposed rear-weapon-corner correspondence; it does not certify physical component identity. Blue is the only measured trace. The muzzle and third-anchor labels in this output’s legend have no samples or plotted lines; they must not be read as zero error. This plot shows raw and mean-centered errors, not the fixed-baseline metric above.</figcaption></figure>
 </section>
 <section class="card" aria-labelledby="limits-title">
 <h2 id="limits-title">Evidence still missing</h2>
@@ -72,7 +72,7 @@
 <section class="card" aria-labelledby="files-title">
 <h2 id="files-title">Downloadable results and provenance</h2>
 <p class="file-links"><a href="summary.json" download>Public summary JSON</a><a href="colab-report.json" download>Original numerical report JSON</a><a href="colab-residuals.png" download>Original residual plot</a></p>
-<p>Execution: Colab CPU, actual animation data, no synthetic test data. Numerical results match the local run exactly.</p>
+<p>Execution: Colab CPU, actual animation data, no synthetic test data. Numerical results match the local run exactly. The preserved numerical report retains its original charging-handle label; the correspondence caveat above applies to those data.</p>
 <details><summary>Verification hashes</summary>
 <p class="small">Preserved Colab ZIP SHA-256<br><code>07692c3be1bb51b78ac6693bb7fff31dfd7a5b4f57609c992fa930523c19eeca</code></p>
 <p class="small">Executed comparison module SHA-256<br><code>14a1f523709ea6f4221508e2138df1764c1cf91a4f880178b38cb325fbfd993c</code></p>

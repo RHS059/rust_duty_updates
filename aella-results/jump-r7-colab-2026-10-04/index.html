@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jump r7 · Colab diagnostics · Rust Duty</title>
+<meta name="description" content="Actual Colab CPU motion measurements for the Jump r7 Eevee preview. One receiver point, 100 frames, no score or full-animation approval.">
+<meta name="theme-color" content="#282a36">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+.report{width:min(920px,calc(100% - 32px));margin:auto;padding:32px 0 64px}a{color:var(--purple);text-underline-offset:.18em}a:hover{color:var(--pink)}h1{font-size:clamp(26px,5vw,40px);line-height:1.1;margin:12px 0}h2{font-size:21px;margin:0 0 12px}h3{font-size:16px;margin:20px 0 8px}.muted{color:#c6c9d9}.kicker{color:var(--purple);font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}.summary{max-width:72ch}.badge{display:inline-block;padding:6px 12px;border:1px solid var(--yellow);border-radius:99px;color:var(--yellow);font-weight:700;font-size:13px}.card{background:#21222c;border:1px solid var(--current);border-radius:16px;padding:24px;margin:22px 0}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}.metric{border:1px solid var(--current);border-radius:12px;padding:16px}.metric strong{display:block;font-size:25px}.metric span{display:block;color:#c6c9d9;font-size:13px}.columns{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:24px;align-items:start}.preview{width:100%;max-height:600px;background:#11121a;border-radius:10px;display:block}figure{margin:0}figcaption{margin:10px 0;font-size:13px;color:#c6c9d9}.plot{width:100%;height:auto;display:block;border-radius:8px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:10px 6px;border-bottom:1px solid var(--current);text-align:left}thead th{color:#c6c9d9}tbody th{font-weight:500}.table-scroll{overflow-x:auto}li{margin:8px 0}code{overflow-wrap:anywhere;word-break:break-word;font-size:12px}details{margin:18px 0}summary{cursor:pointer;color:var(--purple);font-weight:700}.file-links{display:flex;flex-wrap:wrap;gap:10px 20px}.notice{border-left:3px solid var(--yellow);padding-left:14px}.small{font-size:13px}.back{display:inline-block;margin-bottom:18px}
+@media(max-width:680px){.columns{grid-template-columns:1fr}.metrics{grid-template-columns:1fr}.card{padding:18px}.report{width:calc(100% - 24px);padding-top:20px}.preview{max-height:560px}}
+</style>
+</head>
+<body>
+<main class="report">
+<a class="back" href="../../">← Back to media gallery</a>
+<p class="kicker">Aella · Motion measurements · 4 October 2026</p>
+<h1>Jump r7: Colab results</h1>
+<p class="summary">The actual Colab CPU run completed on the mapped 100-frame Jump window. Its numerical results match the local run exactly. The comparison covers one visible receiver point on Halcyon’s existing Eevee preview.</p>
+<p><span class="badge">Diagnostic only · No score</span></p>
+<div class="metrics" aria-label="Key measurements">
+<div class="metric"><strong>100 / 100</strong><span>Comparable frames for one receiver point</span></div>
+<div class="metric"><strong>6.79 px</strong><span>Pre-event-baseline displacement RMS</span></div>
+<div class="metric"><strong>16 px</strong><span>Usual conservative annotation residual bound</span></div>
+</div>
+<p class="notice summary">Most measured motion differences are within the annotation uncertainty. These results do not establish an 80% match, a pass, or complete weapon-motion approval.</p>
+<section class="card" aria-labelledby="preview-title">
+<h2 id="preview-title">Measured preview</h2>
+<div class="columns">
+<figure>
+<video class="preview" controls playsinline preload="metadata" src="../../media/jump_animation.mp4" aria-label="Jump r7: COD reference above, Eevee viewport preview below">Your browser does not support embedded video. <a href="../../media/jump_animation.mp4">Open the Jump preview</a>.</video>
+<figcaption>Halcyon’s published Jump r7. COD reference above, genuine foreground Eevee Viewport Render Animation below. Existing gallery video reused.</figcaption>
+</figure>
+<div>
+<p>100 output frames at 60 fps, 1.667 seconds. Source frames 4014–4113, mapped one-to-one at native speed with no playback retiming.</p>
+<p>The measured landmark is the upper outer right charging-handle corner. It is a proposed corresponding point: the reference rifle and candidate HK416 have different geometry, and this correspondence has not been jointly frozen for scoring.</p>
+<p>All 100 point samples were reviewed. Full-viewport inspection covered 57 frame pairs. Complete normal-speed and slow-playback review remains outstanding.</p>
+<p class="small muted">The gallery’s existing scores and reviewer assessments are separate from this unscored r7 diagnostic.</p>
+<p><a href="https://github.com/RHS059/rust_duty_updates/blob/84e9ed1bacf56a12243e7668a672a0ba0e76ec83/media/jump_animation.mp4">Immutable r7 video revision</a> · <a href="../../media/jump_animation.manifest.json">Video provenance manifest</a> · <a href="https://github.com/RHS059/rust_duty/tree/e9317f90ea171976306e2f17c111325d948ea357/assets/authoring/jump/review/r7">Eevee capture evidence</a> · <a href="https://github.com/RHS059/rust_duty/blob/4363837e46ee89b5ca8baa1b5c08e1e3f81cac91/assets/authoring/jump/halcyon_jump.blend">Pinned authored source</a></p>
+</div>
+</div>
+</section>
+<section class="card" aria-labelledby="measurement-title">
+<h2 id="measurement-title">What the measurements show</h2>
+<ul>
+<li>Baseline-relative displacement: RMS <strong>6.79 px</strong>, 95th percentile <strong>13.64 px</strong>, maximum <strong>16.56 px</strong> at source frame 4045.</li>
+<li>Landing and recovery baseline RMS: <strong>4.85 px</strong>. The largest early-air residual is close to the usual 16 px annotation bound, so it does not justify changing the protected takeoff or air motion.</li>
+<li>The raw screen-position RMS is <strong>68.94 px</strong>. It is retained to show the framing offset. Mean-centered RMS is <strong>6.66 px</strong>; centering is a separate diagnostic, not a replacement for the raw result.</li>
+<li>The candidate holds its exact ready pose after source frame 4095 while the reference retains small motion. The late-tail residual remains visible.</li>
+</ul>
+<p class="muted">The fixed baseline is source frame 4033. Annotation bounds are conservative error bounds, not statistical confidence intervals.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Phase</th><th scope="col">Source frames</th><th scope="col">Samples</th><th scope="col">Baseline RMS</th></tr></thead><tbody><tr><th scope="row">Lead Hold</th><td>4014–4032</td><td>19</td><td>4.04 px</td></tr>
+<tr><th scope="row">Takeoff</th><td>4033–4043</td><td>11</td><td>7.12 px</td></tr>
+<tr><th scope="row">Air</th><td>4044–4066</td><td>23</td><td>6.83 px</td></tr>
+<tr><th scope="row">Landing Recovery</th><td>4067–4095</td><td>29</td><td>4.85 px</td></tr>
+<tr><th scope="row">Tail Hold</th><td>4096–4113</td><td>18</td><td>10.52 px</td></tr></tbody></table></div>
+</section>
+<section class="card" aria-labelledby="plot-title">
+<h2 id="plot-title">Preserved Colab plot</h2>
+<figure><a href="colab-residuals.png"><img class="plot" src="colab-residuals.png" width="1430" height="910" alt="Colab plot of raw and mean-centered charging-handle errors over source frames 4014 to 4113."></a><figcaption>Original Colab output, unchanged. Blue is the only measured trace. The muzzle and third-anchor labels in this output’s legend have no samples or plotted lines; they must not be read as zero error. This plot shows raw and mean-centered errors, not the fixed-baseline metric above.</figcaption></figure>
+</section>
+<section class="card" aria-labelledby="limits-title">
+<h2 id="limits-title">Evidence still missing</h2>
+<ul>
+<li>Physical source muzzle, a third agreed noncollinear rigid anchor, and reference normalization length L. Axis, normalized spatial thresholds and full-weapon motion remain unsupported.</li>
+<li>A frozen event-scoring contract and independent complete-clip review. No percentage or artistic approval was computed.</li>
+<li>Full grip/contact, hidden motion, 3D orientation, export correctness and game-runtime review. A single 2D point cannot establish these.</li>
+</ul>
+<p>Source and candidate bytes were checked locally. The Colab run consumed the measurement JSON and did not independently verify those original media bytes. No new disappearance or reset was apparent in the 57 inspected viewport pairs; unseen frames are not certified.</p>
+</section>
+<section class="card" aria-labelledby="files-title">
+<h2 id="files-title">Downloadable results and provenance</h2>
+<p class="file-links"><a href="summary.json" download>Public summary JSON</a><a href="colab-report.json" download>Original numerical report JSON</a><a href="colab-residuals.png" download>Original residual plot</a></p>
+<p>Execution: Colab CPU, actual animation data, no synthetic test data. Numerical results match the local run exactly.</p>
+<details><summary>Verification hashes</summary>
+<p class="small">Preserved Colab ZIP SHA-256<br><code>07692c3be1bb51b78ac6693bb7fff31dfd7a5b4f57609c992fa930523c19eeca</code></p>
+<p class="small">Executed comparison module SHA-256<br><code>14a1f523709ea6f4221508e2138df1764c1cf91a4f880178b38cb325fbfd993c</code></p>
+<p class="small">Measured r7 preview SHA-256<br><code>9584dd3e3c852ff810caa608d3c7afd003b19d3b5548302a326e6d87c0f29b3e</code></p>
+<p class="small">Original native Eevee archive SHA-256<br><code>12e5aee93e50a2bc2f5b1763ee5e5afee9b4fe2477102cd07db85469e8a7e504</code></p>
+<p class="small">The exact executed module is pinned in the report. Later local metadata and empty-legend handling changes do not change the matching numerical results.</p>
+</details>
+</section>
+<a href="../../">← Back to media gallery</a>
+</main>
+</body>
+</html>

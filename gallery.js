@@ -11,6 +11,10 @@
   // Newer time ranks first. Equal times keep previews.json order.
   // A video missing from this map uses a YYYY-MM-DD in its filename at local midnight, else stays after dated clips in file order.
   const MEDIA_COMMIT_TIME = {
+    "media/colab-hip-forward-visual-v1.mp4": "2026-10-05T03:07:00Z",
+    "media/colab-hip-backward-visual-v1.mp4": "2026-10-05T03:07:00Z",
+    "media/colab-hip-left-visual-v1.mp4": "2026-10-05T03:07:00Z",
+    "media/colab-hip-right-visual-v1.mp4": "2026-10-05T03:07:00Z",
     "media/2026-10-03-reload_current_wip-eevee-studio-reference.mp4": "2026-10-03T12:06:16-05:00",
     "media/hip-forward-r5.mp4": "2026-10-03T13:45:17-05:00",
     "media/hip-backward-r5.mp4": "2026-10-03T13:48:03-05:00",

@@ -349,6 +349,30 @@
       "video": "media/colab-hip-right-visual-v1.mp4",
       "sample": false,
       "detail": "Visual review pending. Reference / approved original HIP r5 / Colab-adjusted experiment. Authored in Blender 4.3.0; captured with Eevee in Blender 4.3.2."
+    },
+    {
+      "id": "prone-crawl-enter-r4",
+      "title": "Prone crawl enter r4",
+      "maker": "halcyon",
+      "review": "maker",
+      "score": null,
+      "motion": "Prone crawl enter",
+      "passCriterion": null,
+      "video": "media/prone_crawl_enter.mp4",
+      "sample": false,
+      "detail": "Revision 4. Visual review pending."
+    },
+    {
+      "id": "vault-low-r3",
+      "title": "Low vault r3",
+      "maker": "aella",
+      "review": "maker",
+      "score": null,
+      "motion": "Low vault",
+      "passCriterion": null,
+      "video": "media/vault_low_r3.mp4",
+      "sample": false,
+      "detail": "Revision 3. Visual review pending."
     }
   ],
   "showWithoutVideo": false

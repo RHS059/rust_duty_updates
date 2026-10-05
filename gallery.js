@@ -11,6 +11,8 @@
   // Newer time ranks first. Equal times keep previews.json order.
   // A video missing from this map uses a YYYY-MM-DD in its filename at local midnight, else stays after dated clips in file order.
   const MEDIA_COMMIT_TIME = {
+    "media/prone_crawl_enter.mp4": "2026-10-05T03:12:00Z",
+    "media/vault_low_r3.mp4": "2026-10-05T03:12:00Z",
     "media/colab-hip-forward-visual-v1.mp4": "2026-10-05T03:07:00Z",
     "media/colab-hip-backward-visual-v1.mp4": "2026-10-05T03:07:00Z",
     "media/colab-hip-left-visual-v1.mp4": "2026-10-05T03:07:00Z",
@@ -413,7 +415,7 @@
     for (const video of sheet.querySelectorAll("video")) video.pause();
   });
 
-  fetch("previews.json")
+  fetch("previews.json?v=20261005-prone-r4-vault-r3")
     .then((response) => {
       if (!response.ok) throw new Error(String(response.status));
       return response.json();

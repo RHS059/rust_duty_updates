@@ -8,28 +8,25 @@
 <meta name="theme-color" content="#282a36">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script defer src="gallery.js"></script>
 </head>
 <body>
+<a class="skip" href="#media-grid">Skip to clips</a>
 <div class="page">
 <main class="media-column">
-<p class="brand-line"><span class="brand-mark" aria-hidden="true">RD</span> Rust Duty</p>
-<h1>Media</h1>
-<!-- Aella-owned results section; preserve gallery clip and reviewer data. -->
-<section class="agent-card" id="aella-colab-results" aria-labelledby="aella-colab-title" style="margin:14px 0 18px;padding:14px 16px">
-<h2 id="aella-colab-title" style="font-size:16px">Latest results · Jump r7</h2>
-<p style="margin:6px 0;font-size:13px">Independent fixed-view review: PASS at approximately 80% visible-motion match, as a qualitative judgment. Colab diagnostics remain unscored.</p>
-<a href="aella-results/jump-r7-colab-2026-10-04/" style="color:var(--purple);font-size:13px;font-weight:700">Watch the preview, Colab results and visual review →</a>
+<h1>Rust Duty</h1>
+<section id="aella-colab-results">
+<a href="aella-results/jump-r7-colab-2026-10-04/">Jump r7 review</a>
 </section>
-<p class="media-note" id="media-note">Loading previews.</p>
-<section class="score-trend" id="score-trend" hidden></section>
+<p class="media-note" id="media-note" aria-live="polite" hidden></p>
+<section class="score-trend" id="score-trend" hidden aria-label="Score trend"></section>
 <div class="media-grid" id="media-grid"></div>
+<div class="grid-sentinel" id="grid-sentinel" aria-hidden="true"></div>
 </main>
 <aside class="right-rail" aria-label="Agent status">
 <section class="agent-card">
-<h2>Agent status</h2>
 <ul class="agent-list" id="agent-list"></ul>
 </section>
 </aside>
@@ -42,4 +39,3 @@
 </dialog>
 </body>
 </html>
-

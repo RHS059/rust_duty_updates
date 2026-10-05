@@ -5,6 +5,58 @@
   const CLOCK = `<svg class="glyph glyph-clock" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.2" fill="none" stroke="#f8f8f2" stroke-width="2.1"/><path d="M12 7.4V12.2l3.1 2" fill="none" stroke="#f8f8f2" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
   const makerName = { aella: "Aella", halcyon: "Halcyon", elara: "Elara" };
+  const BATCH = 6;
+
+  // Last git author time of each video file. previews.json has no timestamps.
+  // Newer time ranks first. Equal times keep previews.json order.
+  // A video missing from this map uses a YYYY-MM-DD in its filename at local midnight, else stays after dated clips in file order.
+  const MEDIA_COMMIT_TIME = {
+    "media/2026-10-03-reload_current_wip-eevee-studio-reference.mp4": "2026-10-03T12:06:16-05:00",
+    "media/hip-forward-r5.mp4": "2026-10-03T13:45:17-05:00",
+    "media/hip-backward-r5.mp4": "2026-10-03T13:48:03-05:00",
+    "media/hip-left-r5.mp4": "2026-10-03T13:50:29-05:00",
+    "media/hip-right-r5.mp4": "2026-10-03T13:52:16-05:00",
+    "media/jump_animation.mp4": "2026-10-03T19:43:44-05:00",
+    "media/2026-10-03-ads-v4-hip_walk_forward_r1-eevee-reference-126f.mp4": "2026-10-03T12:06:16-05:00",
+    "media/2026-10-03-ads-v4-hip_walk_backward_r1-eevee-reference-162f.mp4": "2026-10-03T12:06:16-05:00",
+    "media/2026-10-03-ads-v4-hip_strafe_left_r1-eevee-reference-114f.mp4": "2026-10-03T12:06:16-05:00",
+    "media/2026-10-03-ads-v4-hip_strafe_right_r1-eevee-reference-84f.mp4": "2026-10-03T12:06:16-05:00",
+    "media/2026-10-03-ads-v5-trial1-hip_walk_forward_r1-eevee-reference-126f.mp4": "2026-10-03T12:06:16-05:00",
+    "media/2026-10-03-ads-v6-trial1-hip_walk_forward_r1-eevee-reference-126f.mp4": "2026-10-03T12:28:09-05:00",
+    "media/2026-10-03-ads-v7-articulation15-forward-public47-r1-eevee-reference-126f.mp4": "2026-10-03T14:45:02-05:00",
+    "media/2026-10-03-ads-v8-articulation15-forward-public47-r5-eevee-reference-126f.mp4": "2026-10-03T15:31:43-05:00",
+    "media/2026-10-03-ads-lateral-trial1-public47-left-eevee-proxy-114f.mp4": "2026-10-03T13:20:41-05:00",
+    "media/2026-10-03-ads-lateral-trial1-public47-right-eevee-proxy-84f.mp4": "2026-10-03T13:22:19-05:00",
+    "media/2026-10-03-ads-lateral-trial2-public47-left-eevee-proxy-114f.mp4": "2026-10-03T15:04:58-05:00",
+    "media/2026-10-03-ads-lateral-trial2-public47-right-eevee-proxy-84f.mp4": "2026-10-03T15:04:58-05:00",
+    "media/2026-10-03-ads-lateral-trial3-public47-left-eevee-proxy-114f.mp4": "2026-10-03T15:44:49-05:00",
+    "media/2026-10-03-ads-lateral-trial3-public47-right-eevee-proxy-84f.mp4": "2026-10-03T15:44:49-05:00",
+    "media/2026-10-03-pickup_pose_inspection-eevee-studio-reference.mp4": "2026-10-03T12:06:16-05:00"
+  };
+
+  const commitMillis = (clip) => {
+    if (!clip.video) return null;
+    const known = MEDIA_COMMIT_TIME[clip.video];
+    if (known) return Date.parse(known);
+    const dated = String(clip.video).match(/(\d{4}-\d{2}-\d{2})/);
+    if (dated) return Date.parse(`${dated[1]}T00:00:00-05:00`);
+    return null;
+  };
+
+  const sortClips = (clips) => clips
+    .map((clip, index) => ({ clip, index }))
+    .sort((a, b) => {
+      const ta = commitMillis(a.clip);
+      const tb = commitMillis(b.clip);
+      const aMissing = ta == null;
+      const bMissing = tb == null;
+      if (aMissing !== bMissing) return aMissing ? 1 : -1;
+      if (ta != null && ta !== tb) return tb - ta;
+      return a.index - b.index;
+    })
+    .map((row) => row.clip);
+
+  const takeBatch = (clips, shown) => clips.slice(shown, shown + BATCH);
 
   const markHtml = (clip) => {
     if (clip.review === "reviewing") {
@@ -26,8 +78,14 @@
     return `<span class="mark mark-aella" role="img" aria-label="Aella">${AELLA}</span>`;
   };
 
+  if (typeof document === "undefined") {
+    globalThis.__galleryTest = { sortClips, takeBatch, BATCH, commitMillis };
+    return;
+  }
+
   const grid = document.querySelector("#media-grid");
   const note = document.querySelector("#media-note");
+  const sentinel = document.querySelector("#grid-sentinel");
   const trendHost = document.querySelector("#score-trend");
   const trendColors = [
     "var(--pink)",
@@ -92,13 +150,6 @@
       return;
     }
     trendHost.hidden = false;
-
-    const heading = document.createElement("h2");
-    heading.textContent = "Score trend";
-    const caption = document.createElement("p");
-    caption.className = "trend-note";
-    caption.textContent = "Each dot is one scored revision. Pass is above 80.";
-    trendHost.append(heading, caption);
 
     const width = 640;
     const height = 228;
@@ -206,90 +257,143 @@
   const dialog = document.querySelector("#clip-dialog");
   const sheet = document.querySelector("#sheet-body");
 
-  const openClip = (id) => {
-    const article = sheet.querySelector(`#${CSS.escape(id)}`);
-    if (!article || typeof dialog.showModal !== "function") return;
+  const buildArticle = (clip) => {
+    const article = document.createElement("article");
+    article.id = clip.id;
+    article.hidden = true;
+    if (clip.video) {
+      const video = document.createElement("video");
+      video.className = "sheet-video";
+      video.src = clip.video;
+      video.controls = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = "none";
+      article.append(video);
+    }
+    const h = document.createElement("h2");
+    h.textContent = clip.title;
+    article.append(h);
+    return article;
+  };
+
+  const openClip = (clip) => {
+    if (!clip || typeof dialog.showModal !== "function") return;
+    let article = sheet.querySelector(`#${CSS.escape(clip.id)}`);
+    if (!article) {
+      article = buildArticle(clip);
+      sheet.append(article);
+    }
     for (const node of sheet.querySelectorAll("article")) node.hidden = node !== article;
+    const video = article.querySelector("video");
+    if (video) video.preload = "metadata";
     if (!dialog.open) dialog.showModal();
   };
 
-  const render = (data) => {
-    renderTrend(data.clips || []);
-    const clips = (data.clips || []).filter((clip) => data.showWithoutVideo !== false || clip.video);
-    const ready = clips.filter((clip) => clip.video).length;
-    note.textContent = ready ? `${ready} of ${clips.length} clips have a video.` : "No videos yet. The colored tiles are placeholders until a file is set in previews.json.";
-    grid.replaceChildren();
-    for (const clip of clips) {
-      const button = document.createElement("button");
-      button.className = "tile";
-      button.type = "button";
-      button.dataset.clip = clip.id;
-      button.setAttribute("aria-label", clip.title);
-      const art = clip.video
-        ? `<video class="tile-video" src="${clip.video}" muted loop playsinline preload="metadata"></video>`
-        : `<span class="tile-art" aria-hidden="true"><span class="pane pane-reference">Reference</span><span class="pane pane-current">Current render</span></span>`;
-      button.innerHTML = `${art}<span class="tile-title"></span>${markHtml(clip)}`;
-      button.querySelector(".tile-title").textContent = clip.title;
-      const tileVideo = button.querySelector("video");
-      if (tileVideo) {
-        tileVideo.muted = true;
-        button.addEventListener("mouseenter", () => {
-          const pending = tileVideo.play();
-          if (pending && typeof pending.catch === "function") pending.catch(() => {});
-        });
-        button.addEventListener("mouseleave", () => {
-          tileVideo.pause();
-          try {
-            tileVideo.currentTime = 0;
-          } catch (error) {
-            /* metadata may not be ready yet */
-          }
-        });
-      }
-      button.addEventListener("click", () => openClip(clip.id));
-      grid.append(button);
-
-      const article = document.createElement("article");
-      article.id = clip.id;
-      article.hidden = true;
-      const h = document.createElement("h2");
-      h.textContent = clip.title;
-      if (clip.video) {
-        const video = document.createElement("video");
-        video.className = "sheet-video";
-        video.src = clip.video;
-        video.controls = true;
-        video.loop = true;
-        video.playsInline = true;
-        article.append(video);
-      }
-      article.append(h);
-      sheet.append(article);
+  const renderTile = (clip) => {
+    const button = document.createElement("button");
+    button.className = "tile";
+    button.type = "button";
+    button.dataset.clip = clip.id;
+    button.setAttribute("aria-label", clip.title);
+    const art = clip.video
+      ? `<video class="tile-video" src="${clip.video}" muted loop playsinline preload="metadata"></video>`
+      : `<span class="tile-art" aria-hidden="true"><span class="pane pane-reference">Reference</span><span class="pane pane-current">Current render</span></span>`;
+    button.innerHTML = `${art}<span class="tile-title"></span>${markHtml(clip)}`;
+    button.querySelector(".tile-title").textContent = clip.title;
+    const tileVideo = button.querySelector("video");
+    if (tileVideo) {
+      tileVideo.muted = true;
+      const reset = () => {
+        try {
+          tileVideo.currentTime = 0;
+        } catch (error) {
+          /* metadata may not be ready yet */
+        }
+      };
+      button.addEventListener("pointerenter", () => {
+        reset();
+        const pending = tileVideo.play();
+        if (pending && typeof pending.catch === "function") pending.catch(() => {});
+      });
+      button.addEventListener("pointerleave", () => {
+        tileVideo.pause();
+        reset();
+      });
     }
+    button.addEventListener("click", () => openClip(clip));
+    grid.append(button);
+  };
 
-    const counts = { aella: [], halcyon: [], elara: [] };
-    for (const clip of clips) {
-      if (counts[clip.maker]) counts[clip.maker].push(clip.title);
-    }
+  const renderAgents = () => {
     const rows = [
-      ["aella", "mark mark-aella", AELLA, "Orange rounded triangle.", counts.aella],
-      ["halcyon", "mark mark-halcyon", "", "Blue circle.", counts.halcyon],
-      ["elara", "mark mark-review", CLOCK, "Grey square. A white clock means she is reviewing. A white thumbs up is pass. A red thumbs down is fail.", []]
+      ["aella", "mark mark-aella", AELLA],
+      ["halcyon", "mark mark-halcyon", ""],
+      ["elara", "mark mark-elara", ""]
     ];
     agents.replaceChildren();
-    for (const [name, klass, glyph, blurb, titles] of rows) {
+    for (const [name, klass, glyph] of rows) {
       const li = document.createElement("li");
-      li.innerHTML = `<span class="${klass}" aria-hidden="true">${glyph}</span><div><strong></strong><p class="blurb"></p><p class="made"></p></div>`;
+      li.innerHTML = `<span class="${klass}" aria-hidden="true">${glyph}</span><strong></strong>`;
       li.querySelector("strong").textContent = makerName[name];
-      li.querySelector(".blurb").textContent = blurb;
-      li.querySelector(".made").textContent = titles.length ? `On this grid: ${titles.join(", ")}.` : "Reviewer. She does not make the clips.";
       agents.append(li);
     }
+  };
+
+  const render = (data) => {
+    const source = data.clips || [];
+    renderTrend(source);
+    const ordered = sortClips(source.filter((clip) => data.showWithoutVideo !== false || clip.video));
+    if (!ordered.length) {
+      note.hidden = false;
+      note.textContent = "No videos yet.";
+    } else {
+      note.hidden = true;
+      note.textContent = "";
+    }
+    grid.replaceChildren();
+    sheet.replaceChildren();
+    let shown = 0;
+    const appendBatch = () => {
+      const next = takeBatch(ordered, shown);
+      for (const clip of next) renderTile(clip);
+      shown += next.length;
+    };
+    appendBatch();
+    if (ordered.length > shown && typeof IntersectionObserver === "function") {
+      let observer = null;
+      const pump = () => {
+        if (shown >= ordered.length) {
+          if (observer) observer.disconnect();
+          return;
+        }
+        appendBatch();
+        if (shown >= ordered.length) {
+          if (observer) observer.disconnect();
+          return;
+        }
+        requestAnimationFrame(() => {
+          const rect = sentinel.getBoundingClientRect();
+          if (rect.top <= window.innerHeight + 240) pump();
+        });
+      };
+      observer = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        pump();
+      }, { rootMargin: "240px 0px" });
+      observer.observe(sentinel);
+    } else {
+      while (shown < ordered.length) appendBatch();
+    }
+    renderAgents();
   };
 
   dialog.querySelector("[data-close]").addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    for (const video of sheet.querySelectorAll("video")) video.pause();
   });
 
   fetch("previews.json")
@@ -299,6 +403,7 @@
     })
     .then(render)
     .catch(() => {
-      note.textContent = "Could not load previews.json.";
+      note.hidden = false;
+      note.textContent = "Could not load previews. Refresh the page.";
     });
 })();

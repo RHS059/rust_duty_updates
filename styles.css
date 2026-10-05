@@ -111,6 +111,28 @@ h1 {
   gap: 8px;
 }
 .grid-sentinel { height: 1px; }
+.show-more {
+  display: block;
+  width: 100%;
+  margin: 12px 0 0;
+  background: var(--current);
+  color: var(--fg);
+  border: 0;
+  border-radius: 8px;
+  min-height: 40px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.show-more[hidden] { display: none; }
+.show-more:hover { background: #555875; }
+.show-more:active { transform: scale(0.98); }
+.show-more:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
 .tile {
   position: relative;
   display: block;
@@ -276,7 +298,7 @@ dialog::backdrop { background: rgba(40, 42, 54, 0.72); }
   text-wrap: balance;
 }
 @media (prefers-reduced-motion: reduce) {
-  .tile:active, .sheet-bar button:active { transform: none; }
+  .tile:active, .sheet-bar button:active, .show-more:active { transform: none; }
 }
 @media (max-width: 1024px) {
   .page { grid-template-columns: minmax(0, 1fr) 240px; }

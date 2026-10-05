@@ -86,6 +86,7 @@
   const grid = document.querySelector("#media-grid");
   const note = document.querySelector("#media-note");
   const sentinel = document.querySelector("#grid-sentinel");
+  const showMore = document.querySelector("#show-more");
   const trendHost = document.querySelector("#score-trend");
   const trendColors = [
     "var(--pink)",
@@ -360,7 +361,13 @@
       shown += next.length;
     };
     appendBatch();
-    if (ordered.length > shown && typeof IntersectionObserver === "function") {
+    const armScroll = () => {
+      if (showMore && showMore.isConnected) showMore.remove();
+      if (shown >= ordered.length) return;
+      if (!sentinel || typeof IntersectionObserver !== "function") {
+        while (shown < ordered.length) appendBatch();
+        return;
+      }
       let observer = null;
       const pump = () => {
         if (shown >= ordered.length) {
@@ -382,8 +389,14 @@
         pump();
       }, { rootMargin: "240px 0px" });
       observer.observe(sentinel);
-    } else {
-      while (shown < ordered.length) appendBatch();
+      const rect = sentinel.getBoundingClientRect();
+      if (rect.top > window.innerHeight + 240) appendBatch();
+    };
+    if (ordered.length > shown && showMore) {
+      showMore.hidden = false;
+      showMore.addEventListener("click", armScroll, { once: true });
+    } else if (showMore && showMore.isConnected) {
+      showMore.remove();
     }
     renderAgents();
   };

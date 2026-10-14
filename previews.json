@@ -304,27 +304,27 @@
     },
     {
       "id": "colab-hip-forward-visual-v1",
-      "title": "Colab-adjusted experiment · HIP forward · visual v1",
+      "title": "HIP forward comparison · Review pending · Aella-captured",
       "maker": "aella",
       "review": "maker",
       "score": null,
       "motion": "HIP forward",
       "passCriterion": null,
-      "video": "media/colab-hip-forward-visual-v1.mp4",
+      "video": "media/native-review-20261014/walk-forward/pr41-walk-forward-source-baseline-candidate-native38.mp4",
       "sample": false,
-      "detail": "Visual review pending. Reference / approved original HIP r5 / Colab-adjusted experiment. Authored in Blender 4.3.0; captured with Eevee in Blender 4.3.2."
+      "detail": "Reference / approved original HIP r5 baseline / existing Colab-adjusted visual v1 candidate, captured by Aella using native Eevee viewport rendering. 38 unique frames at 60 fps; closure screenshot excluded from playback. Candidate final review pending. Exact source pin, frame mapping and video hash: media/native-review-20261014/walk-forward/review-manifest.json."
     },
     {
       "id": "colab-hip-backward-visual-v1",
-      "title": "Colab-adjusted experiment · HIP backward · visual v1",
+      "title": "HIP backward comparison · Review pending · Aella-captured",
       "maker": "aella",
       "review": "maker",
       "score": null,
       "motion": "HIP backward",
       "passCriterion": null,
-      "video": "media/colab-hip-backward-visual-v1.mp4",
+      "video": "media/native-review-20261014/walk-backward/pr41-walk-backward-source-baseline-candidate-native45.mp4",
       "sample": false,
-      "detail": "Visual review pending. Reference / approved original HIP r5 / Colab-adjusted experiment. Authored in Blender 4.3.0; captured with Eevee in Blender 4.3.2."
+      "detail": "Reference / approved original HIP r5 baseline / existing Colab-adjusted visual v1 candidate, captured by Aella using native Eevee viewport rendering. 45 unique frames at 60 fps; closure screenshot excluded from playback. Candidate final review pending. Exact source pin, frame mapping and video hash: media/native-review-20261014/walk-backward/review-manifest.json."
     },
     {
       "id": "colab-hip-left-visual-v1",
@@ -364,15 +364,51 @@
     },
     {
       "id": "vault-low-r3",
-      "title": "Low vault r3",
+      "title": "Low vault r3 · Elara 62 / Fail · Aella-captured",
       "maker": "aella",
       "review": "maker",
       "score": null,
       "motion": "Low vault",
       "passCriterion": null,
-      "video": "media/vault_low_r3.mp4",
+      "video": "media/native-review-20261014/vault-low-r3/pr35-vault-low-r3-eevee-native64-paired.mp4",
       "sample": false,
-      "detail": "Revision 3. Visual review pending."
+      "detail": "Native 64-frame Eevee viewport capture by Aella. Elara verdict: 62 / Fail; Halcyon is authoring the isolated r4 correction. Exact r3 source pin, frame mapping and video hash: media/native-review-20261014/vault-low-r3/review-manifest.json. Review: https://github.com/RHS059/rust_duty/pull/35#pullrequestreview-5512024035"
+    },
+    {
+      "id": "aella-capture-jump-r8-landing-native29",
+      "title": "Jump r8 landing · Elara approved 82 / Pass · Halcyon-authored, Aella-captured",
+      "maker": "aella",
+      "review": "maker",
+      "score": null,
+      "motion": "Jump landing",
+      "passCriterion": null,
+      "video": "media/jump-r8-landing-native29-20261014/pr20-jump-r8-landing-native29-paired.mp4",
+      "sample": false,
+      "detail": "Halcyon-authored jump_land_r8_ease_candidate; Aella-captured native Eevee viewport landing evidence. 29 consecutive frames at 60 fps, R3 frames 4067–4095. Elara approved 82 / Pass: https://discord.com/channels/1554885571489566783/1556808474984325191/1559739304937529421 . Review: https://github.com/RHS059/rust_duty/pull/20#pullrequestreview-5511992220 . Exact source pin, frame mapping and video hash: media/jump-r8-landing-native29-20261014/review-manifest.json."
+    },
+    {
+      "id": "aella-capture-onehand-r3-native96",
+      "title": "Onehand r3 · Review pending · Halcyon-authored, Aella-captured",
+      "maker": "aella",
+      "review": "maker",
+      "score": null,
+      "motion": "Onehand mantle",
+      "passCriterion": null,
+      "video": "media/native-review-20261014/mantle-onehand-r3/pr35-onehand-r3-eevee-native96-paired.mp4",
+      "sample": false,
+      "detail": "Halcyon-authored r3; Aella-captured native Eevee viewport evidence. 96 consecutive frames at 60 fps. Final artistic review pending. Exact source pin, frame mapping and video hash: media/native-review-20261014/mantle-onehand-r3/review-manifest.json."
+    },
+    {
+      "id": "aella-capture-prone-r4-native69",
+      "title": "Prone entry r4 · Historical; r5 in progress · Halcyon-authored, Aella-captured",
+      "maker": "aella",
+      "review": "maker",
+      "score": null,
+      "motion": "Prone crawl enter",
+      "passCriterion": null,
+      "video": "media/native-review-20261014/prone-entry-r4/pr34-prone-entry-r4-eevee-native69-paired.mp4",
+      "sample": false,
+      "detail": "Historical r4 comparison only. Halcyon-authored prone_crawl_enter_r4; Aella-captured native Eevee viewport evidence. 69 consecutive frames at 60 fps. Prone r5 capture is in progress; this r4 packet is not a current r5 verdict. Exact r4 source pin, frame mapping and video hash: media/native-review-20261014/prone-entry-r4/review-manifest.json."
     }
   ],
   "showWithoutVideo": false

@@ -11,6 +11,12 @@
   // Newer time ranks first. Equal times keep previews.json order.
   // A video missing from this map uses a YYYY-MM-DD in its filename at local midnight, else stays after dated clips in file order.
   const MEDIA_COMMIT_TIME = {
+    "media/jump-r8-landing-native29-20261014/pr20-jump-r8-landing-native29-paired.mp4": "2026-10-14T01:20:21Z",
+    "media/native-review-20261014/vault-low-r3/pr35-vault-low-r3-eevee-native64-paired.mp4": "2026-10-14T01:23:51Z",
+    "media/native-review-20261014/prone-entry-r4/pr34-prone-entry-r4-eevee-native69-paired.mp4": "2026-10-14T01:27:36Z",
+    "media/native-review-20261014/mantle-onehand-r3/pr35-onehand-r3-eevee-native96-paired.mp4": "2026-10-14T01:27:36Z",
+    "media/native-review-20261014/walk-forward/pr41-walk-forward-source-baseline-candidate-native38.mp4": "2026-10-14T01:27:36Z",
+    "media/native-review-20261014/walk-backward/pr41-walk-backward-source-baseline-candidate-native45.mp4": "2026-10-14T01:27:36Z",
     "media/prone_crawl_enter.mp4": "2026-10-05T03:12:00Z",
     "media/vault_low_r3.mp4": "2026-10-05T03:12:00Z",
     "media/colab-hip-forward-visual-v1.mp4": "2026-10-05T03:07:00Z",
@@ -415,7 +421,7 @@
     for (const video of sheet.querySelectorAll("video")) video.pause();
   });
 
-  fetch("previews.json?v=20261005-prone-r4-vault-r3")
+  fetch("previews.json?v=20261014-native-review")
     .then((response) => {
       if (!response.ok) throw new Error(String(response.status));
       return response.json();

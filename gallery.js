@@ -11,6 +11,7 @@
   // Newer time ranks first. Equal times keep previews.json order.
   // A video missing from this map uses a YYYY-MM-DD in its filename at local midnight, else stays after dated clips in file order.
   const MEDIA_COMMIT_TIME = {
+    "media/prone-entry-r5-diagnostic-native69-20261014/pr34-prone-entry-r5-diagnostic-native69-paired.mp4": "2026-10-14T02:12:31Z",
     "media/jump-r8-landing-native29-20261014/pr20-jump-r8-landing-native29-paired.mp4": "2026-10-14T01:20:21Z",
     "media/native-review-20261014/vault-low-r3/pr35-vault-low-r3-eevee-native64-paired.mp4": "2026-10-14T01:23:51Z",
     "media/native-review-20261014/prone-entry-r4/pr34-prone-entry-r4-eevee-native69-paired.mp4": "2026-10-14T01:27:36Z",
@@ -421,7 +422,7 @@
     for (const video of sheet.querySelectorAll("video")) video.pause();
   });
 
-  fetch("previews.json?v=20261014-native-verdicts")
+  fetch("previews.json?v=20261014-prone-r5-diagnostic")
     .then((response) => {
       if (!response.ok) throw new Error(String(response.status));
       return response.json();

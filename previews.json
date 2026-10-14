@@ -400,7 +400,7 @@
     },
     {
       "id": "aella-capture-prone-r4-native69",
-      "title": "Prone entry r4 · Historical; r5 in progress · Halcyon-authored, Aella-captured",
+      "title": "Prone entry r4 · Historical / unscored · Halcyon-authored, Aella-captured",
       "maker": "aella",
       "review": "maker",
       "score": null,
@@ -408,7 +408,19 @@
       "passCriterion": null,
       "video": "media/native-review-20261014/prone-entry-r4/pr34-prone-entry-r4-eevee-native69-paired.mp4",
       "sample": false,
-      "detail": "Historical r4 comparison only. Halcyon-authored prone_crawl_enter_r4; Aella-captured native Eevee viewport evidence. 69 consecutive frames at 60 fps. Prone r5 capture is in progress; this r4 packet is not a current r5 verdict. Exact r4 source pin, frame mapping and video hash: media/native-review-20261014/prone-entry-r4/review-manifest.json."
+      "detail": "Historical r4 comparison only; unscored by Elara. Halcyon-authored prone_crawl_enter_r4; Aella-captured 69-frame native Eevee viewport evidence. A separate r5 diagnostic packet is now available, with missing final source-preservation proof explicitly disclosed; this r4 packet is not a current r5 verdict. Exact r4 source pin, frame mapping and video hash: media/native-review-20261014/prone-entry-r4/review-manifest.json."
+    },
+    {
+      "id": "aella-capture-prone-r5-diagnostic-native69",
+      "title": "Prone entry r5 DIAGNOSTIC · Final preservation missing · Halcyon-authored, Aella-captured",
+      "maker": "aella",
+      "review": "maker",
+      "score": null,
+      "motion": "Prone crawl enter",
+      "passCriterion": null,
+      "video": "media/prone-entry-r5-diagnostic-native69-20261014/pr34-prone-entry-r5-diagnostic-native69-paired.mp4",
+      "sample": false,
+      "detail": "Halcyon-authored prone_crawl_enter_r5 at 9c5da4a2bb9920ce65390abfd7c287116d369e8a, source SHA256 67cf025fc31d9804cb0259432a91e496d7d8f84d1d4ac6be2b1914a6a98510ad. Aella-captured diagnostic evidence: 69 source-mapped native Eevee viewport frames at 60 fps, R3 [2241,2310). Pixel and mapping recovery verified. Final source-preservation proof is missing: Blender terminated after frame 69, controller exit -9, transport exit 0. Full capture audit did not pass. The disk source hash does not establish final in-memory preservation. Elara final artistic review pending; no approval or integration implied. Exact frame map, video hash and diagnostic limitations: media/prone-entry-r5-diagnostic-native69-20261014/review-manifest.json."
     }
   ],
   "showWithoutVideo": false

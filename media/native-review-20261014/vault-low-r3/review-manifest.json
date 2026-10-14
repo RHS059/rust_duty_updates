@@ -1,0 +1,108 @@
+{
+  "schema": "rust-duty-native64-review-packet/v1",
+  "status": "capture-only review; animation approval pending",
+  "action": "aella_vault_low_r3",
+  "source_blend_sha256": "6b95bdcdfa78e8127ef4b4fa5ac88e4cf9a0654bd0a1271c9916b903f6ee4e79",
+  "reference_video_sha256": "491a1729aa0f32373025d35fff86da76c6c1c8f057c0c553d0fbb5fb6226ff46",
+  "capture_engine": "Genuine foreground RENDERED Eevee viewport",
+  "candidate_frame_source": "transport-proof.json completed records only, mapped through review-selected/copy-proof.json",
+  "candidate_selected_count": 64,
+  "source_frame_index_basis": "zero-based decoded presentation order",
+  "source_frame_range_inclusive": [
+    7284,
+    7347
+  ],
+  "action_frame_range_inclusive": [
+    1,
+    64
+  ],
+  "fps": "60/1",
+  "time_base": "1/15360",
+  "frame_duration_ticks": 256,
+  "clip_duration_ticks": 16384,
+  "clip_duration_seconds": "64/60",
+  "last_frame_pts_ticks": 16128,
+  "retiming": false,
+  "frame_interpolation": false,
+  "candidate_resampling": false,
+  "reference_resampling": false,
+  "panel_composition": {
+    "canvas": [
+      2560,
+      800
+    ],
+    "reference_rectangle_xywh": [
+      0,
+      48,
+      1280,
+      720
+    ],
+    "candidate_rectangle_xywh": [
+      1280,
+      48,
+      1280,
+      720
+    ],
+    "labels_outside_image_panels": true,
+    "pixel_exact_before_preview_encoding": true
+  },
+  "video": {
+    "path": "pr35-vault-low-r3-eevee-native64-paired.mp4",
+    "sha256": "73d0b49c5394a107d8769c121dfd1a221532130853f408fb1f8c005567092469",
+    "bytes": 1848154,
+    "codec": "H.264, CRF16, yuv420p",
+    "lossless": false,
+    "frame_count_verified": 64,
+    "pts_verified": true,
+    "chroma_subsampling": "4:2:0; lossy viewing proxy, not the lossless pixel evidence"
+  },
+  "inputs_preserved": true,
+  "private_source_assets_in_public_packet": false,
+  "transport_proof_sha256": "0789cebe40578a2516c15531986288d41c5fb14fb7be71680da75f854de42675",
+  "selected_copy_proof_sha256": "fa1327cb3901adc944c5c5e96ad0753efd0b1491fe4a244c878865619b391152",
+  "source_preservation_checks": "8/8 passed, independently verified",
+  "artistic_approval": false,
+  "runtime_verified": false,
+  "pixel_audit": {
+    "passed": true,
+    "original_audit_sha256": "13732f9216a4015b6e17e53658a245aee649252a6499cc48b336c9f97302ca2e"
+  },
+  "lossless_evidence": {
+    "preserved_locally": true,
+    "candidate_selected_pngs": 64,
+    "reference_decoded_pngs": 64,
+    "paired_master_codec": "FFV1 RGB",
+    "paired_master_sha256": "9d70d32affcda0038bf223f6b0766007304a3eb4bf95169fee79fb1705ed497d",
+    "publication_contents": "This subset includes only the encoded review MP4, review-manifest.json and frame-map.json. Lossless original PNG corpora, raw desktop screenshots, asset sources and other packet files are not included."
+  },
+  "mapping_file_paths": "PNG basenames identify preserved local originals; those complete PNG corpora are not included in this public subset.",
+  "assets": [
+    {
+      "path": "pr35-vault-low-r3-eevee-native64-paired.mp4",
+      "sha256": "73d0b49c5394a107d8769c121dfd1a221532130853f408fb1f8c005567092469",
+      "bytes": 1848154
+    },
+    {
+      "path": "frame-map.json",
+      "sha256": "aca40ca65530c9a56470fbfd69fe0d35de5000d4795629b22c3a9752ae420f4b",
+      "bytes": 62072
+    }
+  ],
+  "publication_subset": {
+    "repository": "RHS059/rust_duty_updates",
+    "directory": "media/native-review-20261014/vault-low-r3",
+    "files": [
+      "pr35-vault-low-r3-eevee-native64-paired.mp4",
+      "review-manifest.json",
+      "frame-map.json"
+    ],
+    "original_review_manifest_sha256": "4bf85f352a49d51dc1df43ea37db401591bc10de7104fec6947a915eab265ec7",
+    "no_artistic_approval_implied": true
+  },
+  "immutable_source": {
+    "repository": "RHS059/rust_duty",
+    "commit": "1daee9ff0d250b6ad926dedaab4977663f560406",
+    "path": "assets/authoring/mantle/r3/candidate/aella_mantle_r3.blend",
+    "sha256": "6b95bdcdfa78e8127ef4b4fa5ac88e4cf9a0654bd0a1271c9916b903f6ee4e79"
+  }
+}

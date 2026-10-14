@@ -1,0 +1,219 @@
+{
+  "schema": "rust-duty-native-review-packet/v2",
+  "pull_request": 35,
+  "take": "mantle-onehand-r3",
+  "action": "aella_mantle_onehand_r3",
+  "status": "capture-only review; animation approval pending",
+  "source_blend_sha256": "f289c6d404a6c9c276baac3089887f77a15ac2d18029e1aa39f66d6e335081df",
+  "reference_video_sha256": "491a1729aa0f32373025d35fff86da76c6c1c8f057c0c553d0fbb5fb6226ff46",
+  "mechanical_audit_sha256": "cfe7be95fdeb3e4ff453d8c0ab34c2a2a7f36b20b132347cae2abcbdf0e7407f",
+  "source_depiction_acceptance_sha256": "287b4aa1e047584825560b86d42a00fe159d3425bf1d8653d2adf05ceb92195c",
+  "capture_engine": "Genuine foreground RENDERED Eevee viewport",
+  "taa_samples": 16,
+  "candidate_selection": "transport-proof.json completed selected_crop records only, mapped by copy-proof.json executor transfer native_path to review_copy",
+  "candidate_frame_count": 96,
+  "source_frame_index_basis": "zero-based decoded presentation order",
+  "source_frame_range_inclusive": [
+    7787,
+    7882
+  ],
+  "action_frame_range_inclusive": [
+    1,
+    96
+  ],
+  "fps": "60/1",
+  "time_base": "1/15360",
+  "frame_duration_ticks": 256,
+  "duration_ticks": 24576,
+  "duration_seconds": "96/60 = 1.6",
+  "last_output_pts_ticks": 24320,
+  "retiming": false,
+  "frame_interpolation": false,
+  "candidate_spatial_resize": false,
+  "reference_spatial_resize": false,
+  "panel_composition": {
+    "canvas": [
+      2560,
+      800
+    ],
+    "reference_rectangle_xywh": [
+      0,
+      48,
+      1280,
+      720
+    ],
+    "candidate_rectangle_xywh": [
+      1280,
+      48,
+      1280,
+      720
+    ],
+    "labels_outside_panels": true,
+    "pixel_exact_before_encoding": true
+  },
+  "video": {
+    "path": "pr35-onehand-r3-eevee-native96-paired.mp4",
+    "sha256": "a7595f7f004b37e018426090a86bc340d110b9be5377988d4125b691efee6722",
+    "bytes": 2040860,
+    "codec": "H.264, CRF16, yuv420p, lossy 4:2:0 viewing proxy",
+    "lossless": false,
+    "decoded_frame_count_verified": 96,
+    "exact_pts_verified": true
+  },
+  "witnesses": [
+    {
+      "path": "paired-witness-action-0001.png",
+      "sha256": "c717ee508eb36350ff17c25782b2212fc64b91ac7cbe8709cf7b350715dfc076",
+      "bytes": 1511610,
+      "action_frame": 1,
+      "source_frame": 7787,
+      "native_panel_pixels_unchanged": true
+    },
+    {
+      "path": "paired-witness-action-0026.png",
+      "sha256": "a25ec486b8d5624ae80be82e24dc062b0990232c663884277fc40a3acbc4419e",
+      "bytes": 1421520,
+      "action_frame": 26,
+      "source_frame": 7812,
+      "native_panel_pixels_unchanged": true
+    },
+    {
+      "path": "paired-witness-action-0044.png",
+      "sha256": "0854bca09abf5ecfbadecf506cf0f77643c003edd9d7570cd603a931a3706a68",
+      "bytes": 1420579,
+      "action_frame": 44,
+      "source_frame": 7830,
+      "native_panel_pixels_unchanged": true
+    },
+    {
+      "path": "paired-witness-action-0045.png",
+      "sha256": "7ce157b85ec031d0ee156e02ceb0bf1c44de538b542f9dccaa625d035a8f0c7e",
+      "bytes": 1410879,
+      "action_frame": 45,
+      "source_frame": 7831,
+      "native_panel_pixels_unchanged": true
+    },
+    {
+      "path": "paired-witness-action-0048.png",
+      "sha256": "f8418e207a74e517399f2a7ec3626bd4b816607670aefda9a8ae278946263a64",
+      "bytes": 1441321,
+      "action_frame": 48,
+      "source_frame": 7834,
+      "native_panel_pixels_unchanged": true
+    },
+    {
+      "path": "paired-witness-action-0049.png",
+      "sha256": "2099f73bb031cdc5ac5a357b205d7dc76294a0bb46e047e762199ca711f74078",
+      "bytes": 1445755,
+      "action_frame": 49,
+      "source_frame": 7835,
+      "native_panel_pixels_unchanged": true
+    },
+    {
+      "path": "paired-witness-action-0050.png",
+      "sha256": "a7a7deff59d8f59c79fa359f9cba232659e703009acb76581b446b650a8a0f6b",
+      "bytes": 1469368,
+      "action_frame": 50,
+      "source_frame": 7836,
+      "native_panel_pixels_unchanged": true
+    },
+    {
+      "path": "paired-witness-action-0087.png",
+      "sha256": "fff928891c03c254fa9e36d162a863c3e9b6135e2fd9b76e59103edb8bf5cebf",
+      "bytes": 1587689,
+      "action_frame": 87,
+      "source_frame": 7873,
+      "native_panel_pixels_unchanged": true
+    },
+    {
+      "path": "paired-witness-action-0088.png",
+      "sha256": "febd06bad1f00980334e713ef6979abf160c32e497309f110ea1deadad5a9e18",
+      "bytes": 1574786,
+      "action_frame": 88,
+      "source_frame": 7874,
+      "native_panel_pixels_unchanged": true
+    },
+    {
+      "path": "paired-witness-action-0096.png",
+      "sha256": "f5c321e911f7381c6e96d45f14010465f399b6fb75e380168a42faef8155bdf7",
+      "bytes": 1495681,
+      "action_frame": 96,
+      "source_frame": 7882,
+      "native_panel_pixels_unchanged": true
+    }
+  ],
+  "storyboard": "scaled overview only",
+  "lossless_evidence": {
+    "selected_candidate_png_count": 96,
+    "source_reference_png_count": 96,
+    "paired_master_codec": "FFV1 RGB",
+    "paired_master_sha256": "1d6f5ed518f4ba7923e72af1a2159682c0601a139dda76b5e71d2a759045a8af",
+    "paired_master_decoded_rgb24_verified_frames": 96,
+    "location": "Original selected candidate PNGs, working decoded reference PNGs and paired FFV1 master are retained in executor temporary storage; original native capture evidence remains unchanged. Full absolute paths are in the local-only review manifest.",
+    "timestamp_note": "Matroska timestamps may be millisecond quantized. Use MP4/frame map for exact 1/15360 presentation timing."
+  },
+  "mapping_file_paths": "PNG basenames identify preserved local originals; complete PNG corpora are not in this publication subset.",
+  "review_focus": {
+    "candidate_action_frame_26": "Largely below the frame; inspect the full native crop without camera adjustment.",
+    "source_frame_groups": [
+      [
+        7830,
+        7831
+      ],
+      [
+        7834,
+        7835,
+        7836
+      ],
+      [
+        7873,
+        7874
+      ]
+    ],
+    "corresponding_action_frame_groups": [
+      [
+        44,
+        45
+      ],
+      [
+        48,
+        49,
+        50
+      ],
+      [
+        87,
+        88
+      ]
+    ],
+    "quality_verdict": "Pending full motion and phase review."
+  },
+  "inputs_preserved": true,
+  "capture_integrity_passed": true,
+  "source_depiction_capture_accepted": true,
+  "artistic_approval": false,
+  "runtime_verified": false,
+  "private_source_assets_in_packet": false,
+  "publication_subset": {
+    "repository": "RHS059/rust_duty_updates",
+    "directory": "media/native-review-20261014/mantle-onehand-r3",
+    "files": [
+      "pr35-onehand-r3-eevee-native96-paired.mp4",
+      "review-manifest.json",
+      "frame-map.json"
+    ],
+    "original_review_manifest_sha256": "29371e5bb76a7c29fb11bd142c51a0b8047decf10b83ec4ccf151bdd2cd0665d",
+    "artifact_reference_scope": "Other relative artifact names in this manifest identify retained assembly evidence; only the three listed files are included in this published subset. No BLEND, texture, mesh, original PNG corpus or raw desktop screenshot is uploaded.",
+    "no_artistic_approval_implied": true
+  },
+  "immutable_source": {
+    "repository": "RHS059/rust_duty",
+    "commit": "1daee9ff0d250b6ad926dedaab4977663f560406",
+    "path": "assets/authoring/mantle/onehand_r3/candidate/aella_mantle_onehand_r3.blend",
+    "sha256": "f289c6d404a6c9c276baac3089887f77a15ac2d18029e1aa39f66d6e335081df"
+  },
+  "published_frame_map": {
+    "path": "frame-map.json",
+    "sha256": "f924e94ee8ab452a69fc023e2a311d8d4d77080af6e88651ffbd621585d593df",
+    "bytes": 97474
+  }
+}

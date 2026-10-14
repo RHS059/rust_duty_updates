@@ -1,0 +1,185 @@
+{
+  "schema": "rust-duty-forward-three-panel-review/v1",
+  "pull_request": 41,
+  "status": "comparison evidence for existing final review; no artistic verdict",
+  "source_blend_sha256": "f7d6e76d387a07508f61b2ade708fa930b93bd73b167110469a43c88ecf8eaf4",
+  "reference_id": "R2 / 5KM0XSKxTWw",
+  "reference_mp4_sha256": "cff413d8d114b611bbe6f50cc553ef109d61eb8eb1fff960425f506b84d6767e",
+  "original_source_commit": "4b9236a0f6378af926d74a3bfd56781fde52c5e5",
+  "baseline_action": "hip_walk_forward_r5",
+  "candidate_action": "hip_walk_forward_colab_visual_v1",
+  "candidate_capture_attempt": 2,
+  "capture_engine": "Genuine foreground RENDERED Eevee viewport",
+  "taa_samples": 16,
+  "candidate_and_baseline_camera_identical": true,
+  "fps": "60/1",
+  "time_base": "1/15360",
+  "unique_source_range_half_open": [
+    48,
+    86
+  ],
+  "unique_action_range_inclusive": [
+    1,
+    38
+  ],
+  "unique_frame_count": 38,
+  "source_closure_frame": 86,
+  "action_closure_frame": 39,
+  "closure_excluded_from_playback": true,
+  "duration_seconds": "38/60 = 19/30",
+  "duration_ticks": 9728,
+  "last_output_pts_ticks": 9472,
+  "frame_step_ticks": 256,
+  "no_retiming": true,
+  "no_phase_shift": true,
+  "no_spatial_resize": true,
+  "panel_composition": {
+    "canvas": [
+      3840,
+      800
+    ],
+    "source_rectangle_xywh": [
+      0,
+      48,
+      1280,
+      720
+    ],
+    "baseline_rectangle_xywh": [
+      1280,
+      48,
+      1280,
+      720
+    ],
+    "candidate_rectangle_xywh": [
+      2560,
+      48,
+      1280,
+      720
+    ],
+    "labels_outside_panels": true
+  },
+  "video": {
+    "path": "pr41-walk-forward-source-baseline-candidate-native38.mp4",
+    "bytes": 1179277,
+    "sha256": "9e9a5292863aa02b28e8786331baa78422ca4d10613d0aac7ab578feb224c0b2",
+    "encoding": "H.264 CRF16 yuv420p lossy viewing proxy",
+    "frames_verified": 38,
+    "pts_verified": true
+  },
+  "witnesses": [
+    {
+      "path": "triple-witness-action-0001.png",
+      "action_frame": 1,
+      "source_frame": 48,
+      "closure_witness": false,
+      "sha256": "8875ad538d7c999c47c188b4c43b6aa7a08b239d4dab72231b42fc5d18261da4",
+      "bytes": 1777403,
+      "native_panels_pixel_exact": true
+    },
+    {
+      "path": "triple-witness-action-0026.png",
+      "action_frame": 26,
+      "source_frame": 73,
+      "closure_witness": false,
+      "sha256": "4a2eb137d42d445cbb422dcb654b0fcd95d0992c0197040d20a77b2db4de4783",
+      "bytes": 1820491,
+      "native_panels_pixel_exact": true
+    },
+    {
+      "path": "triple-witness-action-0027.png",
+      "action_frame": 27,
+      "source_frame": 74,
+      "closure_witness": false,
+      "sha256": "fddee0148527e379d654095721ac9b7621939e281fdb75414f94aec029afca65",
+      "bytes": 2002634,
+      "native_panels_pixel_exact": true
+    },
+    {
+      "path": "triple-witness-action-0032.png",
+      "action_frame": 32,
+      "source_frame": 79,
+      "closure_witness": false,
+      "sha256": "048fbc13e80e8de8bef48794845236303c32e132661d8417bdd3a1bff61cd482",
+      "bytes": 1984008,
+      "native_panels_pixel_exact": true
+    },
+    {
+      "path": "triple-witness-action-0038.png",
+      "action_frame": 38,
+      "source_frame": 85,
+      "closure_witness": false,
+      "sha256": "42e6015c928fef15e06fe6595367554f0ac9703632b92bcb169ef9140194ba29",
+      "bytes": 1875058,
+      "native_panels_pixel_exact": true
+    },
+    {
+      "path": "closure-witness-action-0039.png",
+      "action_frame": 39,
+      "source_frame": 86,
+      "closure_witness": true,
+      "sha256": "61dc0482ec31b494ad378c9760ff13c59b37e62425ce49b5ac660b20009d9cef",
+      "bytes": 1871838,
+      "native_panels_pixel_exact": true
+    }
+  ],
+  "differences": {
+    "first26_selected_png_bytes_identical": true,
+    "first_different_action_frame": 27,
+    "first_different_source_frame": 74,
+    "later_unique_frames_differ": [
+      27,
+      38
+    ],
+    "closure39_differs": true,
+    "details": "baseline-candidate-differences.json"
+  },
+  "lossless_master": {
+    "codec": "FFV1 RGB",
+    "sha256": "31fb3819e7b2edc64745dc75080118476e8e3ea671e9eb80405472fde1b80a67",
+    "frames_rgb24_verified": 38,
+    "storage": "Executor temporary storage; absolute path in local-only manifest",
+    "timing_note": "Matroska timestamps may be millisecond-quantized. MP4 and maps preserve exact 1/15360 timing."
+  },
+  "originals_preserved": true,
+  "private_source_assets_in_public_packet": false,
+  "review_scope": "This packet feeds the existing final revision review. No additional artistic gate is introduced.",
+  "artistic_approval": false,
+  "baseline_proof_hashes": {
+    "source_sha256": "f7d6e76d387a07508f61b2ade708fa930b93bd73b167110469a43c88ecf8eaf4",
+    "config_sha256": "3cc7d227cb64caad3f24299d6a01038d9089d51aab4d2e3bb7f5d3de4c820ec8",
+    "transport_sha256": "7527132b307c9b61741967c09fcbbf70b0d5e366a3158ae880edfdbc723bd060",
+    "audit_sha256": "9dd94fa175474931b3e803573eac6b110d2cf0113780cde634ba7ba028d4ddd6",
+    "copy_sha256": "23a7cf80b6b9f05b39c620d184a08b803d4af0907327b773ccdda0789cd8781e"
+  },
+  "candidate_proof_hashes": {
+    "source_sha256": "f7d6e76d387a07508f61b2ade708fa930b93bd73b167110469a43c88ecf8eaf4",
+    "config_sha256": "fafc9ef5fdec3b7795bc242599556b2a69fa59106889a039a85fe8e905cb0930",
+    "transport_sha256": "27fe73c8795f0b6a90879f66a3211afb8ae7dd5e77e4fb723b201803e0cc20d0",
+    "audit_sha256": "bbc717b75d7dfbc2f13a99451172ca49e4acb7f7a497dfc253a7f3010b1939b7",
+    "copy_sha256": "841b2af53b493d20e4cc196fdbdfd91c68a190d79d703ac5892424f2d5cb03f4"
+  },
+  "reference_map_sha256": "ed3a0dcee4bf9b54ddd7f3ac85e9129b10a1a888519a4edd9a042a5d0cfcf2e2",
+  "publication_subset": {
+    "repository": "RHS059/rust_duty_updates",
+    "directory": "media/native-review-20261014/walk-forward",
+    "files": [
+      "pr41-walk-forward-source-baseline-candidate-native38.mp4",
+      "review-manifest.json",
+      "frame-map.json"
+    ],
+    "original_review_manifest_sha256": "55646f399ae9da5b4c8ff3735a5659c492ad6e9d7f9e0185afd17637d1a6720a",
+    "artifact_reference_scope": "Other relative artifact names in this manifest identify retained assembly evidence; only the three listed files are included in this published subset. No BLEND, texture, mesh, original PNG corpus or raw desktop screenshot is uploaded.",
+    "no_artistic_approval_implied": true
+  },
+  "immutable_source": {
+    "repository": "RHS059/rust_duty",
+    "commit": "6a1c145ca63143e99bbf694a76f9d19bd31becf5",
+    "path": "assets/authoring/hip_walk_colab_trial/v1/hip_four_walks_colab_visual_v1.blend",
+    "sha256": "f7d6e76d387a07508f61b2ade708fa930b93bd73b167110469a43c88ecf8eaf4"
+  },
+  "published_frame_map": {
+    "path": "frame-map.json",
+    "sha256": "020d4a59e0e5bc345be85c294a979e9fe7b46d25b9894fe2392cd1e587d63c01",
+    "bytes": 44235
+  }
+}

@@ -422,7 +422,7 @@
     for (const video of sheet.querySelectorAll("video")) video.pause();
   });
 
-  fetch("previews.json?v=20261014-prone-r5-diagnostic")
+  fetch("previews.json?v=20261014-prone-r5-verdict")
     .then((response) => {
       if (!response.ok) throw new Error(String(response.status));
       return response.json();

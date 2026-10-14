@@ -412,7 +412,7 @@
     },
     {
       "id": "aella-capture-prone-r5-diagnostic-native69",
-      "title": "Prone entry r5 DIAGNOSTIC · Final preservation missing · Halcyon-authored, Aella-captured",
+      "title": "Prone entry r5 DIAGNOSTIC · Elara 64 / Fail · Final preservation missing",
       "maker": "aella",
       "review": "maker",
       "score": null,
@@ -420,7 +420,7 @@
       "passCriterion": null,
       "video": "media/prone-entry-r5-diagnostic-native69-20261014/pr34-prone-entry-r5-diagnostic-native69-paired.mp4",
       "sample": false,
-      "detail": "Halcyon-authored prone_crawl_enter_r5 at 9c5da4a2bb9920ce65390abfd7c287116d369e8a, source SHA256 67cf025fc31d9804cb0259432a91e496d7d8f84d1d4ac6be2b1914a6a98510ad. Aella-captured diagnostic evidence: 69 source-mapped native Eevee viewport frames at 60 fps, R3 [2241,2310). Pixel and mapping recovery verified. Final source-preservation proof is missing: Blender terminated after frame 69, controller exit -9, transport exit 0. Full capture audit did not pass. The disk source hash does not establish final in-memory preservation. Elara final artistic review pending; no approval or integration implied. Exact frame map, video hash and diagnostic limitations: media/prone-entry-r5-diagnostic-native69-20261014/review-manifest.json."
+      "detail": "Halcyon-authored prone_crawl_enter_r5 at 9c5da4a2bb9920ce65390abfd7c287116d369e8a, source SHA256 67cf025fc31d9804cb0259432a91e496d7d8f84d1d4ac6be2b1914a6a98510ad. Aella-captured diagnostic evidence: 69 source-mapped native Eevee viewport frames at 60 fps, R3 [2241,2310). Elara motion verdict: 64 / Fail, independently of the capture audit gap. Halcyon owns the new r6 correction: grow drop amplitude and leftward trough roll on the existing f12–45 beats, hold depth, then remove the high-floating exit. Preserve projection and timing; do not statically reframe the comparison. Review: https://discord.com/channels/1554885571489566783/1556808474984325191/1559752200761376912 . Pixel and mapping recovery verified. Final source-preservation proof remains missing: Blender terminated after frame 69, controller exit -9, transport exit 0. Full capture audit FAILED; the disk source hash does not establish final in-memory preservation. No approval or integration implied. Exact frame map, video hash and diagnostic limitations: media/prone-entry-r5-diagnostic-native69-20261014/review-manifest.json."
     }
   ],
   "showWithoutVideo": false

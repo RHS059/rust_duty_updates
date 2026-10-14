@@ -421,7 +421,7 @@
     for (const video of sheet.querySelectorAll("video")) video.pause();
   });
 
-  fetch("previews.json?v=20261014-native-review")
+  fetch("previews.json?v=20261014-native-verdicts")
     .then((response) => {
       if (!response.ok) throw new Error(String(response.status));
       return response.json();
